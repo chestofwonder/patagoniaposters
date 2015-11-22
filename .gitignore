@@ -2,3 +2,5 @@
 /web/nbproject/project.properties
 /web/nbproject/project.xml
 progresos.rtf
+
+web/db_connection.php
