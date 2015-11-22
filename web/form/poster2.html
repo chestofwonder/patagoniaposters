@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Formulario de consulta</title>
+</head>
+ <link rel="stylesheet" href="estilof.css" type="text/css" media="all">
+<body>
+<div class="logo"> <img src="logo1.png"></div>
+<h2>Patagonia Posters :: arte impreso</h2>
+<h3>www.patagoniaposters.cl</h3>
+
+<div class="group">
+<form action="registro.php" method="POST">
+<br>
+<label for="nombre">Nombre / name <span>(requerido)</span></label>
+<input type="text" name="nombre" class="form-input" required/>
+<label for="mail">Email<span>(requerido)</span></label>
+<input type="mail" name="mail" class="form-input" />
+<label for="consulta">Consulta / Request </label>
+<textarea name="consulta" class="form-inputa"> </textarea>
+<input type="hidden" name="algo" value="PUERTO NATALES">
+
+<input class="form-btn" name="submit" type="submit" value="Enviar" /> 
+</form>
+ </div>
+ 
+</body>
+</html>
