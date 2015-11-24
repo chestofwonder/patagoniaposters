@@ -1982,7 +1982,7 @@ echo	" "	.	$row[5];
 
 <?php	// Begin PROMOCIONES 
 
-$sql	=	"SELECT * FROM promos";
+$sql	=	"SELECT * FROM promos ORDER BY id";
 $resultado	=	mysql_query($sql);
 
 // Count offers iteration to calculate delay time
