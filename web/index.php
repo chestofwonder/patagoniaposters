@@ -91,8 +91,8 @@ ga('send', 'pageview');
 
 <?php
 // Database initialization. Create $conn var and selects "tagoni81_datos" database
-if	(file_exists('db_connection.php'))	{
-include_once	'db_connection.php';
+if	(file_exists('../db_connection.php'))	{
+include_once	'../db_connection.php';
 }
 ?>
 
