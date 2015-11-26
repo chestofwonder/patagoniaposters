@@ -79,7 +79,13 @@ Original works of patagonian artist Julieta Fernández Cánepa.">
 
 </script>
 </head>
-  
+<?php
+// Database initialization. Create $conn var and selects "tagoni81_datos" database
+if	(file_exists('db_connection.php'))	{
+include_once	'db_connection.php';
+}
+?>
+
 <body>
 <div id="container">    
 
@@ -1361,75 +1367,46 @@ echo $row[8]; };?>">
 				
 			</div>
 			
-			<div class="row">
-				<div class="col-sm-4 price1" data-uk-scrollspy="{cls:'uk-animation-fade', delay:300, repeat: true}">					
-					<div class="price-table">
-						<div class="rate">
-							<span class="rate-price"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM promen WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo "".$row[3]; };?></span><br >
-							<span class="rate-period">( 
-							<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM promen WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo "".$row[4]; };?>)</span></div>
-					
-						<h3><?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM promen WHERE id = '1' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[1]."<br>"; };?></h3>
-						<p class="tbl-border"><span class="price-item"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); $sql = "SELECT * FROM promen WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[2]."<br>"; };?></span></p><br>
-						
-						
-						<a href="form/solicitud.html"  target="_new"><div class="btn-buy-now">
-							<span class="buy-now-text">BUY</span>
-						</div></a>
-					</div>					
-				</div>
-				
-			  <div class="col-sm-4 price1" data-uk-scrollspy="{cls:'uk-animation-fade', delay:600, repeat: true}">					
-					<div class="price-table">
-						<div class="rate">
-							<span class="rate-price"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM promen WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo "".$row[3]; };?></span><br >
-							<span class="rate-period">( 
-							<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM promen WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo "".$row[4]; };?>)</span>
-						</div>
-					
-						<h3><?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM promen WHERE id = '2' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[1]."<br>"; };?></h3>
-						<p class="tbl-border"><span class="price-item"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); $sql = "SELECT * FROM promen WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[2]."<br>"; };?></span></p><br>
-						
-						
-						<a href="form/solicitud.html"  target="_new"><div class="btn-buy-now">
-							<span class="buy-now-text">BUY</span>
-						</div></a>
-					</div>					
-				</div>
-				
-				<div class="clear" style="display:none;"></div>
-				
-				<div class="col-sm-4 price1" data-uk-scrollspy="{cls:'uk-animation-fade', delay:900, repeat: true}">					
-					<div class="price-table">
-						<div class="rate">
-							<span class="rate-price"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM promen WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo "".$row[3]; };?></span><br >
-							<span class="rate-period">( 
-							<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM promen WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo "".$row[4]; };?>)</span>
-						</div>
-					
-						<h3><?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM promen WHERE id = '3' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[1]."<br>"; };?></h3>
-						<p class="tbl-border"><span class="price-item"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); $sql = "SELECT * FROM promen WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[2]."<br>"; };?></span></p><br>
-						
-						
-						<a href="form/solicitud.html"  target="_new"><div class="btn-buy-now">
-							<span class="buy-now-text">BUY</span>
-						</div></a>
-                        
-					</div>					
-				</div>
-				
-				
-				
-			</div>
+<div class="row">
+
+<?php	// Begin PROMOCIONES 
+
+$sql	=	"SELECT * FROM promen ORDER BY id";
+$resultado	=	mysql_query($sql);
+
+// Count offers iteration to calculate delay time
+$index = 1;
+
+while	($row	=	mysql_fetch_array($resultado,	MYSQL_ASSOC))	{ ?>
+
+<div	class	=	"mia col-sm-4 price1"	data-uk-scrollspy	=	"{cls:'uk-animation-fade', delay:<?php echo 300 * $index; ?>, repeat: true}">
+<div	class	=	"price-table">
+
+<div	class	=	"rate">
+<span	class	=	"rate-price"><?php echo $row["nacional"]; ?></span>
+<br />
+<span	class	=	"rate-period"><?php echo "(" . $row["internacional"] . ")"; ?></span>
+</div>
+
+<h3><?php echo $row["nombre"]; ?></h3>
+<p	class	=	"tbl-border">
+<span	class	=	"price-item"><?php echo $row["descripcion"]; ?></span>
+</p>
+
+<a class="promo_track"	href	=	"form/solicitud.html"	target	=	"_new">
+<div	class	=	"btn-buy-now">
+<span	class	=	"buy-now-text">BUY</span>
+</div>
+</a>
+
+</div>
+</div>
+
+<?php $index++; } ?>
+
+
+
+</div>
 		</div> 
 	</div>
 	<!--/ Our capabilities -->
