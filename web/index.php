@@ -1952,19 +1952,7 @@ echo	$row[8];
 
 
 <!-- Our Team -->
-#father {
-   position: relative;
-}
 
-#son1 {
-   position: absolute;
-   top: 0;
-}
-
-#son2 {
-   position: absolute;
-   bottom: 0;
-}
 
 <!-- Our capabilities -->
 <div id="pack" class="section-price-table " >
