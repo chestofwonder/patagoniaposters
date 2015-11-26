@@ -91,8 +91,8 @@ ga('send', 'pageview');
 
 <?php
 // Database initialization. Create $conn var and selects "tagoni81_datos" database
-if	(file_exists('../db_connection.php'))	{
-include_once	'../db_connection.php';
+if	(file_exists('db_connection.php'))	{
+include_once	'db_connection.php';
 }
 ?>
 
@@ -1952,7 +1952,19 @@ echo	$row[8];
 
 
 <!-- Our Team -->
+#father {
+   position: relative;
+}
 
+#son1 {
+   position: absolute;
+   top: 0;
+}
+
+#son2 {
+   position: absolute;
+   bottom: 0;
+}
 
 <!-- Our capabilities -->
 <div id="pack" class="section-price-table " >
@@ -1968,6 +1980,7 @@ header("Content-Type: text/html;charset=utf-8");
 mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM promos WHERE id = '1' 'utf8'";
 $resultado	=	mysql_query($sql);
+
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[5];
 };
@@ -2004,7 +2017,7 @@ while	($row	=	mysql_fetch_array($resultado,	MYSQL_ASSOC))	{ ?>
 <span	class	=	"price-item"><?php echo $row["descripcion"]; ?></span>
 </p>
 
-<a	href	=	"form/solicitud.html"	target	=	"_new">
+<a class="promo_track"	href	=	"form/solicitud.html"	target	=	"_new">
 <div	class	=	"btn-buy-now">
 <span	class	=	"buy-now-text">COMPRAR</span>
 </div>
