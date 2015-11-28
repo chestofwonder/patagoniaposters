@@ -1168,6 +1168,8 @@ echo	$row[8];
 </tr>
 </table>
 
+                                                        <div class= "algo">
+                                                            <img  class='btn_zoom' src='assets/images/btns/zoom.png'  alt='poster1' />
 
 </div>
 
@@ -1924,6 +1926,8 @@ echo	$row[8];
 </tr>
 </table>
 
+                                                                                                            <div class= "algo">
+                                                                                                                <img  class='btn_zoom' src='assets/images/btns/zoom.png'  alt='poster1' />
 
 </div>
 
