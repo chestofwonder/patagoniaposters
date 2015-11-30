@@ -1168,8 +1168,6 @@ echo	$row[8];
 </tr>
 </table>
 
-                                                        <div class= "algo">
-                                                            <img  class='btn_zoom' src='assets/images/btns/zoom.png'  alt='poster1' />
 
 </div>
 
@@ -1926,8 +1924,6 @@ echo	$row[8];
 </tr>
 </table>
 
-                                                                                                            <div class= "algo">
-                                                                                                                <img  class='btn_zoom' src='assets/images/btns/zoom.png'  alt='poster1' />
 
 </div>
 
@@ -1986,7 +1982,7 @@ echo	" "	.	$row[5];
 <div class="row">
 
 <?php	// Begin PROMOCIONES 
-
+mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM promos ORDER BY id";
 $resultado	=	mysql_query($sql);
 

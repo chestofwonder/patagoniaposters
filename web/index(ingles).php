@@ -1370,7 +1370,7 @@ echo $row[8]; };?>">
 <div class="row">
 
 <?php	// Begin PROMOCIONES 
-
+mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM promen ORDER BY id";
 $resultado	=	mysql_query($sql);
 

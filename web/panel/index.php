@@ -17,6 +17,7 @@
 				/*					* ***************************************** */
 				/* Luego vamos a obtener todos los datos que esten contenidos 
 					 en la tabla con una consulta */
+				
 				$sql	=	"SELECT * FROM panel";
 
 				$resultado	=	mysql_query($sql);
@@ -93,31 +94,24 @@
 								?>
 
 								<script>
-								function validatePromosForm() {
-										var valid = true;
+	function validatePromosForm() {
 
-										for (var i = 1; i <= $('#num_promos').val(); i++) {
-												if ($('#eliminar' + i).is(":checked") === false) {
-								// Validate new promo fields
-														if ($('#nombre' + i).val() === '' ||
-															$('#descripcion' + i).val() === '' ||
-															$('#nacional' + i).val() === '' ||
-															$('#internacional' + i).val() === ''
-															) {
+ $('#num_promos').val(parseInt($('.single_promo').length));
+	
+	for (var i = 1; i <= $('#num_promos').val(); i++) {
+	
+	if ($('#eliminar' + i).is(":checked") === false) {
+	
+ if ($('#nombre' + i).val() === ''){ $('#required' + i).show(); return false; };
+	if ($('#nacional' + i).val() === ''){ $('#required' + i).show(); return false; };
+	if ($('#internacional' + i).val() === ''){ $('#required' + i).show(); return false; };
+	if ($('#descripcion' + i).val() === ''){ $('#required' + i).show(); return false; };
+	}
 
-									$('#required' + i).show();
+	}
 
-									valid = false;
-														}
-												}
-										}
-
-										if (valid) {
-												return true;
-										} else {
-												return false;
-										}
-								}
+	return true;
+	}
 								</script>
 
 								<p>PROMOCIONES</p>
@@ -134,24 +128,25 @@
 												</tr>
 
 												<?php
-												$query	=	"SELECT * FROM promos";
+												mysql_query("set names 'utf8'");
+												$query	=	"SELECT * FROM promos ORDER BY id";
 												$result	=	mysql_query($query);
 												$i	=	0;
 												while	($row	=	mysql_fetch_row($result))	{
 												$i++;
 												?>	
-												<tr>
-														<td><input type='hidden' name='id<?php	echo	$i	?>' value='<?php	echo	$row[0]	?>' /><?php	echo	$row[0]	?></td>
-														<td><input type='text' name='nombre<?php	echo	$i	?>' value='<?php	echo	$row[1]	?>'></td>
-														<td> <textarea id='descripcion<?php	echo	$i	?>' name='descripcion<?php	echo	$i	?>' ><?php	echo	$row[2]	?></textarea></td>
-														<td> $ cl<input type='text' name='nacional<?php	echo	$i	?>' value='<?php	echo	$row[3]	?>' /></td>
-														<td>USD<input type='text' name='internacional<?php	echo	$i	?>' value='<?php	echo	$row[4]	?>'/></td>
+												<tr class='single_promo'>
+														<td><input type='hidden' id='id<?php	echo	$i	?>' name='id<?php	echo	$i	?>' value='<?php	echo	$row[0]	?>' /><?php	echo	$row[0]	?></td>
+														<td><input type='text' id='nombre<?php	echo	$i	?>' name='nombre<?php	echo	$i	?>' value='<?php	echo	$row[1]	?>'></td>
+														<td><textarea id='descripcion<?php	echo	$i	?>' name='descripcion<?php	echo	$i	?>' ><?php	echo	$row[2]	?></textarea></td>
+														<td> $ cl<input type='text' id='nacional<?php	echo	$i	?>' name='nacional<?php	echo	$i	?>' value='<?php	echo	$row[3]	?>' /></td>
+														<td>USD<input type='text' id='internacional<?php	echo	$i	?>' name='internacional<?php	echo	$i	?>' value='<?php	echo	$row[4]	?>'/></td>
 														<td><input type='checkbox' class='checkbox_delete_promo' value='eliminar<?php	echo	$i	?>' id='eliminar<?php	echo	$i	?>' name='eliminar<?php	echo	$i	?>' /></td>
 												</tr>
-<?php	}	?>
+												<?php	}	?>
 
 										</table>
-										<input type='hidden' id="num_promos" name='num_promos' value='<?php	echo	$i	?>' />
+										<input type='hidden' id="num_promos" name='num_promos' value='' />
 										<input type='submit' value='Aceptar' />
 										<input type='button' id='button_add_promo' value='Añadir otra promoción' />
 								</form>
