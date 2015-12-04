@@ -1,0 +1,64 @@
+body{
+  padding-top:30px  
+}
+
+#login_form{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 13px;
+  width:150px;
+  text-align: center;
+  margin:45px auto;
+}
+
+#login_form label{
+  display:block;
+  margin-top:25px;
+  margin-bottom:5px;
+}
+
+#login_form input {
+  margin-bottom:15px;
+}
+
+#login_form input[type="submit"]{
+  padding:10px 20px;
+  color:white;
+  background-color:#F1826A;
+  border:0;
+  margin:25px auto;
+}
+
+#panel_options{
+  position:fixed;
+  top:0px;
+  right:0px;
+  width:100%;
+  padding-right:1%;
+  padding-bottom:12px;
+  background-color: white;
+  border-bottom:1px solid #ccc;
+}
+
+#logout_form{
+float:right;
+ width:20%;
+}
+
+#change_language{
+  float:right;
+  width:5%;
+   margin-left:0px;
+}
+
+#logout_form label{
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 13px;
+}
+
+#logout_form input[type="submit"]{
+ 
+}
+

@@ -1,13 +1,35 @@
+<?php
+ini_set('session.gc_maxlifetime', 1800);
+session_set_cookie_params(1800);
+session_start();
+
+if(empty($_SESSION["user"])){
+header('Location: ../security/login_form.html');
+die();
+}else{
+session_unset;
+}
+?>
+
+<!DOCTYPE html> 
 <html>
 		<head>
 				<meta charset="UTF-8">
 				<title>Panel Patagonia Posters</title>
 				<link rel="stylesheet" href="estilo.css" type="text/css" media="all">
+				<link rel="stylesheet" href="/css/security.css" type="text/css" media="all">
 				<script src='../js/jquery.js' type='text/javascript'></script>
 				<script src='../js/custom/panel.js' type='text/javascript'></script>
 		</head>
 		<body>
-				<input class='aceptar' type='submit' value='Español' onClick="window.location = '/panel/index.php';" /> 
+					<header id="panel_options">
+							<input id="change_language" type="button" value="Español" onClick="window.location = '/panel/index.php';" /> 
+						<form id="logout_form" action="../security/logout.php" method="post">
+<label>Estás logado como: <?php echo $_SESSION["user"]; ?></label>
+<input type="submit" value="Salir" />
+</form>
+				</header>
+				
 				<?php
 				if	(file_exists('../db_connection.php'))	{
 				include_once	'../db_connection.php';
