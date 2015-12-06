@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<link rel="stylesheet" type="text/css" href="../css/security.css" />
+				<script type="text/javascript" src="../js/jquery.js"></script>
+				<script type="text/javascript" src="../js/custom/security.js"></script>
+		</head>
+		<body>
 <?php
 if($_POST['id_session'] !== 'eF4%$Ft3%'){
 header('Location: login_form.html');
@@ -21,11 +29,20 @@ $_SESSION["user"] = $_POST['user'];
 header('Location: ../panel/index.php');
 die();
 }else{
+echo '<div id="incorrect_login_message">';
 echo '<p>Contraseña incorrecta</p>';
+echo '<input id="button_back" type="button" value="Volver atrás" />';
+echo '</div>';
 die();
 }
 
 }else{
+echo '<div id="incorrect_login_message">';
 echo '<p>Usuario desconocido</p>';
+echo '<input id="button_back" type="button" value="Volver atrás" />';
+echo '</div>';
 die();
 }
+?>
+</body>
+</html>
