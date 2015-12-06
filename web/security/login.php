@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 		<head>
+				<meta charset="UTF-8">
+				<title>Panel Patagonia Posters - Login</title>
 				<link rel="stylesheet" type="text/css" href="../css/security.css" />
 				<script type="text/javascript" src="../js/jquery.js"></script>
 				<script type="text/javascript" src="../js/custom/security.js"></script>
