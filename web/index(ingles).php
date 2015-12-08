@@ -1360,7 +1360,14 @@ echo $row[8]; };?>">
 					<div class="header-title">
 						<h4>SPECIAL SALES</h4>
 						<p class="text5">
-							<?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM promen WHERE id = '1' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[5]."<br>"; };?>
+							<?php 
+							header("Content-Type: text/html;charset=utf-8");
+							mysql_query("set names 'utf8'"); 
+							$sql = "SELECT * FROM promos_info WHERE lang = 'en'";
+							$resultado = mysql_query($sql);
+							$row = mysql_fetch_array($resultado, MYSQL_ASSOC); 
+							echo " ".$row['message']."<br>"; 
+							?>
 						</p>
 					</div>
 				</div>

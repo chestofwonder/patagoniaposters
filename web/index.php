@@ -1966,12 +1966,10 @@ echo	$row[8];
 <?php
 header("Content-Type: text/html;charset=utf-8");
 mysql_query("set names 'utf8'");
-$sql	=	"SELECT * FROM promos WHERE id = '1' 'utf8'";
+$sql	=	"SELECT * FROM promos_info WHERE lang = 'es'";
 $resultado	=	mysql_query($sql);
-
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[5];
-};
+$row	=	mysql_fetch_array($resultado, MYSQL_ASSOC);
+echo	" "	.	$row['message'];
 ?>
 </p>
 </div>

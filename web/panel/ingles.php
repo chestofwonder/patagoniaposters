@@ -68,7 +68,7 @@ session_unset;
 				/*					* ***************************************** */
 				/* Luego vamos a obtener todos los datos que esten contenidos 
 					 en la tabla con una consulta */
-				$sql	=	"SELECT * FROM promen WHERE id = '1'";
+				$sql	=	"SELECT * FROM promos_info WHERE lang = 'en'";
 
 				$resultado	=	mysql_query($sql);
 				/* ahora creamos la tabla en html para mostrar los resultados
@@ -76,15 +76,15 @@ session_unset;
 				echo	"
 		<p>PROMOCIONES</p>
 		
-		<form name='ejecuta' method='post' action='ejecuta2promo.php'>
+		<form name='ejecuta' method='post' action='ejecuta2pro.php?lang=en'>
 			<table class='tabla'>
 				<tr class='tabla1'><td>Texto promociones</td></tr>";
 				$i	=	0;
 
-				while	($row	=	mysql_fetch_row($resultado))	{
+				while	($row	=	mysql_fetch_array($resultado, MYSQL_ASSOC))	{
 				echo	"<tr>
-					  <td> <textarea id='tablapromo' name='aclaracion[$i]' >"	.	$row[5]	.	"</textarea></td>
-					  <td><input type='radio' name='seleccion[$i]' value='modifica"	.	$row[0]	.	"'></td><!-- Esta l�nea es para saber si se modifica -->
+					  <td> <textarea id='tablapromo' name='aclaracion[$i]' >"	.	$row['message']	.	"</textarea></td>
+					  <td><input type='radio' name='seleccion[$i]' value='modifica"	.	$row['id_promo_info']	.	"'></td><!-- Esta l�nea es para saber si se modifica -->
 					  </tr>";
 				$i++;
 				}
