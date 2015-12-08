@@ -1,3 +1,10 @@
+<?php
+if($_POST['id_session'] !== 'eF4%$Ft3%'){
+header('Location: login_form.html');
+die();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 		<head>
@@ -8,12 +15,8 @@
 				<script type="text/javascript" src="../js/custom/security.js"></script>
 		</head>
 		<body>
+				
 <?php
-if($_POST['id_session'] !== 'eF4%$Ft3%'){
-header('Location: login_form.html');
-die();
-}
-
 if	(file_exists('../db_connection.php'))	{
 include_once	'../db_connection.php';
 }
@@ -28,7 +31,7 @@ ini_set('session.gc_maxlifetime', 1800);
 session_set_cookie_params(1800);
 session_start();
 $_SESSION["user"] = $_POST['user'];
-header('Location: ../panel/index.php');
+echo "<script>window.top.location='../panel/index.php'</script>";
 die();
 }else{
 echo '<div id="incorrect_login_message">';
