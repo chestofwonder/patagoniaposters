@@ -47,7 +47,9 @@
 <link href="css/demo.css" rel="stylesheet">
 
 
-
+<script src="js/jquery.js"></script>
+<script src="js/swtch/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/custom/shopping_cookies.js"></script>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -97,6 +99,7 @@ include_once	'db_connection.php';
 ?>
 
 <body>
+		
 <div id="container">
 
 <!--  Outer wrapper for presentation only, this can be anything you like -->
@@ -145,6 +148,7 @@ include_once	'db_connection.php';
 <li><a href="#pack">promociones</a></li>
 <li><a href="#envio">Precios</a></li>
 <li><a href="#contacto">Contacto</a></li>
+<li>	<a href="shopping.php" id="shopping_cart"></a></li>
 </ul>
 </div><!--/.nav-collapse -->
 </div>
@@ -467,13 +471,13 @@ echo	" "	.	$row[1]	.	"<br>";
 </h2>
 <div class="single-tab">
 
-<span class="tab-two"><?php
+<?php
 $sql	=	"SELECT * FROM panel WHERE id = '1'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[2]	.	"<br>";
 };
-?></span>
+?>
 
 </div>
 <h3>Descripción y detalles</h3>
@@ -552,52 +556,17 @@ echo	" "	.	$row[7];
 <div class="author-title">Autora</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip">Julieta Fernández Cánepa</div>
+</div>
 
-</div><br>
-<table width="150" border="0" cellpadding="0">
-<tr>
-<td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<div class="author-info">
+<div class="author-title">Añadir</div>
+<div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_1" min="1" max="999" step="1" value="1"></div>
+</div>
 
-<fieldset>
-<input type="hidden" name="shipping" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '1'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[7];
-};
-?>">
-<input type="hidden" name="cbt" value="Su operación a sido exitosa">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="rm" value="2">
-<input type="hidden" name="bn" value="Patagonia Posters">
-<input type="hidden" name="business" value="info@patagoniaposters.cl">
-<input type="hidden" name="item_name" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '1'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[1];
-};
-?>">
-<input type="hidden" name="amount" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '1'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[8];
-};
-?>">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="image_url" value="">
-<input type="hidden" name="return" value="http://patagoniaposters.cl">
-<input type="hidden" name="cancel_return" value="http://patagoniaposters.cl">
-<input type="hidden" name="no_shipping" value="1">
-<input type="image" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form></td>
+<input type="button" class="add_shooping_bag" data="poster1" id="add_poster_1" value="Añadir a la cesta" />
 
-</td>
-<td><a href="form/poster1.html" target="_new"><img src="assets/images/btns/btn_otromedio.png" width="70" height="70"></a></td>
-</tr>
-</table>
+<!-- <td><a href="form/poster1.html" target="_new"><img src="assets/images/btns/btn_otromedio.png" width="70" height="70"></a></td> -->
+
 
 </div>
 
@@ -652,13 +621,13 @@ echo	" "	.	$row[1]	.	"<br>";
 ?></h2>
 <div class="single-tab">
 
-<span class="tab-two"><?php
+<?php
 $sql	=	"SELECT * FROM panel WHERE id = '2'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[2]	.	"<br>";
 };
-?></span>
+?>
 
 </div>
 <h3>Descripción y detalles</h3>
@@ -741,52 +710,14 @@ echo	" "	.	$row[7];
 <div class="author-title">Autora</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip">Julieta Fernández Cánepa</div>
+</div>
+<div class="author-info">
+<div class="author-title">Añadir</div>
+<div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_2" min="1" max="999" step="1" value="1"></div>
+</div>
 
-</div><br>
-<table width="150" border="0" cellpadding="0">
-<tr>
-<td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="button" class="add_shooping_bag" data="poster2" id="add_poster_2" value="Añadir a la cesta" />
 
-<fieldset>
-<input type="hidden" name="shipping" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '2'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[7];
-};
-?>">
-<input type="hidden" name="cbt" value="Su operación a sido exitosa">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="rm" value="2">
-<input type="hidden" name="bn" value="Patagonia Posters">
-<input type="hidden" name="business" value="info@patagoniaposters.cl">
-<input type="hidden" name="item_name" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '2'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[1];
-};
-?>">
-<input type="hidden" name="amount" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '2'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[8];
-};
-?>">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="image_url" value="">
-<input type="hidden" name="return" value="http://patagoniaposters.cl">
-<input type="hidden" name="cancel_return" value="http://patagoniaposters.cl">
-<input type="hidden" name="no_shipping" value="1">
-<input type="image" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form></td>
-
-</td>
-<td><a href="form/poster2.html" target="_new"><img src="assets/images/btns/btn_otromedio.png" width="70" height="70"></a></td>
-</tr>
-</table>
 
 </div>
 
@@ -840,17 +771,15 @@ echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
 <div class="single-tab">
-
-<span class="tab-two"><?php
+<?php
 $sql	=	"SELECT * FROM panel WHERE id = '3'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[2]	.	"<br>";
 };
-?></span>
-
-
+?>
 </div>
+
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
@@ -931,52 +860,14 @@ echo	" "	.	$row[7];
 <div class="author-title">Autora</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip">Julieta Fernández Cánepa</div>
+</div>
 
-</div><br>
-<table width="150" border="0" cellpadding="0">
-<tr>
-<td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<div class="author-info">
+<div class="author-title">Añadir</div>
+<div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_3" min="1" max="999" step="1" value="1"></div>
+</div>
 
-<fieldset>
-<input type="hidden" name="shipping" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '3'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[7];
-};
-?>">
-<input type="hidden" name="cbt" value="Su operación a sido exitosa">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="rm" value="2">
-<input type="hidden" name="bn" value="Patagonia Posters">
-<input type="hidden" name="business" value="info@patagoniaposters.cl">
-<input type="hidden" name="item_name" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '3'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[1];
-};
-?>">
-<input type="hidden" name="amount" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '3'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[8];
-};
-?>">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="image_url" value="">
-<input type="hidden" name="return" value="http://patagoniaposters.cl">
-<input type="hidden" name="cancel_return" value="http://patagoniaposters.cl">
-<input type="hidden" name="no_shipping" value="1">
-<input type="image" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form></td>
-
-</td>
-<td><a href="form/poster3.html" target="_new"><img src="assets/images/btns/btn_otromedio.png" width="70" height="70"></a></td>
-</tr>
-</table>
+<input type="button" class="add_shooping_bag" data="poster3" id="add_poster_3" value="Añadir a la cesta" />
 
 </div>
 
@@ -1029,18 +920,17 @@ while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
-<div class="single-tab">
 
-<span class="tab-two"><?php
+<div class="single-tab">
+<?php
 $sql	=	"SELECT * FROM panel WHERE id = '4'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[2]	.	"<br>";
 };
-?></span>
-
-
+?>
 </div>
+
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
@@ -1121,53 +1011,14 @@ echo	" "	.	$row[7];
 <div class="author-title">Autora</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip">Julieta Fernández Cánepa</div>
+</div>
 
-</div><br>
-<table width="150" border="0" cellpadding="0">
-<tr>
-<td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<div class="author-info">
+<div class="author-title">Añadir</div>
+<div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_4" min="1" max="999" step="1" value="1"></div>
+</div>
 
-<fieldset>
-<input type="hidden" name="shipping" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '4'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[7];
-};
-?>">
-<input type="hidden" name="cbt" value="Su operación a sido exitosa">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="rm" value="2">
-<input type="hidden" name="bn" value="Patagonia Posters">
-<input type="hidden" name="business" value="info@patagoniaposters.cl">
-<input type="hidden" name="item_name" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '4'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[1];
-};
-?>">
-<input type="hidden" name="amount" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '4'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[8];
-};
-?>">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="image_url" value="">
-<input type="hidden" name="return" value="http://patagoniaposters.cl">
-<input type="hidden" name="cancel_return" value="http://patagoniaposters.cl">
-<input type="hidden" name="no_shipping" value="1">
-<input type="image" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form></td>
-
-</td>
-<td><a href="form/poster4.html" target="_new"><img src="assets/images/btns/btn_otromedio.png" width="70" height="70"></a></td>
-</tr>
-</table>
-
+<input type="button" class="add_shooping_bag" data="poster4" id="add_poster_4" value="Añadir a la cesta" />
 
 </div>
 
@@ -1220,18 +1071,17 @@ while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
-<div class="single-tab">
 
-<span class="tab-two"><?php
+<div class="single-tab">
+<?php
 $sql	=	"SELECT * FROM panel WHERE id = '5'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[2]	.	"<br>";
 };
-?></span>
-
-
+?>
 </div>
+
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
@@ -1313,54 +1163,14 @@ echo	" "	.	$row[7];
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip">Julieta Fernández Cánepa</div>
 
-</div><br>
-<table width="150" border="0" cellpadding="0">
-<tr>
-<td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+</div>
 
-<fieldset>
-<input type="hidden" name="shipping" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '5'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[7];
-};
-?>">
-<input type="hidden" name="cbt" value="Su operación a sido exitosa">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="rm" value="2">
-<input type="hidden" name="bn" value="Patagonia Posters">
-<input type="hidden" name="business" value="info@patagoniaposters.cl">
-<input type="hidden" name="item_name" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '5'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[1];
-};
-?>">
-<input type="hidden" name="amount" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '5'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[8];
-};
-?>">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="image_url" value="">
-<input type="hidden" name="return" value="http://patagoniaposters.cl">
-<input type="hidden" name="cancel_return" value="http://patagoniaposters.cl">
-<input type="hidden" name="no_shipping" value="1">
-<input type="image" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form></td>
+<div class="author-info">
+<div class="author-title">Añadir</div>
+<div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_5" min="1" max="999" step="1" value="1"></div>
+</div>
 
-</td>
-<td><a href="form/poster5.html" target="_new"><img src="assets/images/btns/btn_otromedio.png" width="70" height="70"></a></td>
-</tr>
-
-</tr>
-</table>
-
+<input type="button" class="add_shooping_bag" data="poster5" id="add_poster_5" value="Añadir a la cesta" />
 </div>
 
 </div>
@@ -1413,18 +1223,17 @@ while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
-<div class="single-tab">
 
-<span class="tab-two"><?php
+<div class="single-tab">
+<?php
 $sql	=	"SELECT * FROM panel WHERE id = '6'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[2]	.	"<br>";
 };
-?></span>
-
-
+?>
 </div>
+
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
@@ -1505,52 +1314,14 @@ echo	" "	.	$row[7];
 <div class="author-title">Autora</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip">Julieta Fernández Cánepa</div>
+</div>
 
-</div><br>
-<table width="150" border="0" cellpadding="0">
-<tr>
-<td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<div class="author-info">
+<div class="author-title">Añadir</div>
+<div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_6" min="1" max="999" step="1" value="1"></div>
+</div>
 
-<fieldset>
-<input type="hidden" name="shipping" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '6'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[7];
-};
-?>">
-<input type="hidden" name="cbt" value="Su operación a sido exitosa">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="rm" value="2">
-<input type="hidden" name="bn" value="Patagonia Posters">
-<input type="hidden" name="business" value="info@patagoniaposters.cl">
-<input type="hidden" name="item_name" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '6'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[1];
-};
-?>">
-<input type="hidden" name="amount" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '6'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[8];
-};
-?>">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="image_url" value="">
-<input type="hidden" name="return" value="http://patagoniaposters.cl">
-<input type="hidden" name="cancel_return" value="http://patagoniaposters.cl">
-<input type="hidden" name="no_shipping" value="1">
-<input type="image" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form></td>
-
-</td>
-<td><a href="form/poster6.html" target="_new"><img src="assets/images/btns/btn_otromedio.png" width="70" height="70"></a></td>
-</tr>
-</table>
+<input type="button" class="add_shooping_bag" data="poster6" id="add_poster_6" value="Añadir a la cesta" />
 
 </div>
 
@@ -1603,18 +1374,17 @@ while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
-<div class="single-tab">
 
-<span class="tab-two"><?php
+<div class="single-tab">
+<?php
 $sql	=	"SELECT * FROM panel WHERE id = '7'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[2]	.	"<br>";
 };
-?></span>
-
-
+?>
 </div>
+
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
@@ -1695,47 +1465,14 @@ echo	" "	.	$row[7];
 <div class="author-title">Autora</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip">Julieta Fernández Cánepa</div>
+</div>
 
-</div><br>
-<table width="150" border="0" cellpadding="0">
-<tr>
-<td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<div class="author-info">
+<div class="author-title">Añadir</div>
+<div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_7" min="1" max="999" step="1" value="1"></div>
+</div>
 
-<fieldset>
-<input type="hidden" name="shipping" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '7'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[7];
-};
-?>">
-<input type="hidden" name="cbt" value="Su operación a sido exitosa">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="rm" value="2">
-<input type="hidden" name="bn" value="Patagonia Posters">
-<input type="hidden" name="business" value="info@patagoniaposters.cl">
-<input type="hidden" name="item_name" value="EL CHALTEN-MOUNT FITZ ROY">
-<input type="hidden" name="amount" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '7'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[8];
-};
-?>">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="image_url" value="">
-<input type="hidden" name="return" value="http://patagoniaposters.cl">
-<input type="hidden" name="cancel_return" value="http://patagoniaposters.cl">
-<input type="hidden" name="no_shipping" value="1">
-<input type="image" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form></td>
-
-</td>
-<td><a href="form/poster7.html" target="_new"><img src="assets/images/btns/btn_otromedio.png" width="70" height="70"></a></td>
-</tr>
-</table>
-
+<input type="button" class="add_shooping_bag" data="poster7" id="add_poster_7" value="Añadir a la cesta" />
 </div>
 
 </div>
@@ -1788,17 +1525,17 @@ while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
-<div class="single-tab">
 
-<span class="tab-two"><?php
+<div class="single-tab">
+<?php
 $sql	=	"SELECT * FROM panel WHERE id = '8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[2]	.	"<br>";
 };
-?></span>
-
+?>
 </div>
+
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
@@ -1883,47 +1620,14 @@ echo	" "	.	$row[7];
 <div class="author-title">Autora</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip">Julieta Fernández Cánepa</div>
+</div>
 
-</div><br>
-<table width="150" border="0" cellpadding="0">
-<tr>
-<td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<div class="author-info">
+<div class="author-title">Añadir</div>
+<div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_8" min="1" max="999" step="1" value="1"></div>
+</div>
 
-<fieldset>
-<input type="hidden" name="shipping" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '8'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[7];
-};
-?>">
-<input type="hidden" name="cbt" value="Su operación a sido exitosa">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="rm" value="2">
-<input type="hidden" name="bn" value="Patagonia Posters">
-<input type="hidden" name="business" value="info@patagoniaposters.cl">
-<input type="hidden" name="item_name" value="COLECCION PEQUENO FORMATO">
-<input type="hidden" name="amount" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '8'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[8];
-};
-?>">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="image_url" value="">
-<input type="hidden" name="return" value="http://patagoniaposters.cl">
-<input type="hidden" name="cancel_return" value="http://patagoniaposters.cl">
-<input type="hidden" name="no_shipping" value="1">
-<input type="image" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form></td>
-
-</td>
-<td><a href="form/poster8.html" target="_new"><img src="assets/images/btns/btn_otromedio.png" width="70" height="70"></a></td>
-</tr>
-</table>
-
+<input type="button" class="add_shooping_bag" data="poster8" id="add_poster_8" value="Añadir a la cesta" />
 
 </div>
 
@@ -2234,8 +1938,6 @@ Consultar precios y tiempos de realización.
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.js"></script>
-<script src="js/swtch/jquery.cookie.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-modal.js"></script>
 <script src="js/bootstrap-modalmanager.js"></script>

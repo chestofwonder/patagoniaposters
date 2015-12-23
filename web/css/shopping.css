@@ -1,0 +1,85 @@
+
+body{
+  background-color: #F1F1F1 !important;
+}
+
+h1{
+   text-align:center;
+}
+
+.poster_mini{
+  width:55px;  
+}
+
+.poster_mini img{
+  width:100%
+}
+
+#wrapper{
+ width:90%;
+ margin:45px auto;
+}
+
+#wrapper_products{
+  width:100%;
+  border:1px #CCC solid;
+  padding:25px;
+  margin-bottom:45px;
+  background-color: white;
+  border-radius:5px;
+}
+
+#wrapper_send_info{
+  border:1px #CCC solid;
+  padding:25px;
+  background-color: white;
+  border-radius:5px;
+}
+
+h1, h2{
+  margin-bottom:30px !important;
+  margin-top:0px !important;
+}
+
+#wrapper_send_info input, #wrapper_send_info select{
+  border: 1px #CCC solid;
+  padding:5px;
+  margin-left:15px;
+  width:94%;
+}
+
+#wrapper_send_info select option{
+   padding:5px;
+}
+
+#wrapper_send_info div{
+  margin-bottom:15px;
+}
+
+table, td, th{
+   border: 1px solid #CCC;
+}
+
+th{
+  text-align:center !important;
+  background-color: #DDD;
+  border-spacing: 0px !important;
+}
+
+td, th {
+  padding: 20px !important;
+}
+
+
+#checkout{
+  width:100px !important;
+  padding: 15px 0 !important;
+  color: #FFF;
+  background-color: #F1826A;
+  border:none !important;
+  margin-top:25px;
+  float:right;
+}
+
+
+

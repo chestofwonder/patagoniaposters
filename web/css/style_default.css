@@ -4311,8 +4311,9 @@ Reversal Feathurs-Single Start
 		margin-top: 0px;
 	}
 	.single-tab{
-	height: 60px;
-	width: 200px;
+	 padding:15px;
+	 color:white;
+	 display:inline-block;
 	}	
 	.tab-one{		
 		padding: 22px 14px 22px 18px;
@@ -4331,7 +4332,7 @@ Reversal Feathurs-Single Start
 	.tab-two{
 		position: relative;
 		left: 20px;
-		top: 23px;
+		top: 15px;
 		color: #fff;
 	}	
 	.tab-three{		
@@ -5119,6 +5120,32 @@ Reversal Price Table Start
 		font-weight: normal;
 		font-size: 13px;		
 	}
+	
+	.add_shooping_bag{
+	  background-color: #62A69F;
+	  font-family: Lato;
+	  font-weight: bold;
+	  font-size: 11px;
+	  text-transform:uppercase;
+	  color: white;
+	  padding:15px;
+	  margin-top: 8px;
+	  margin-right: 15px;
+	  margin-bottom: 25px;
+	}
+	
+	.add_shooping_bag:hover{
+	  background-color: #353943;
+	}
+	
+	.quantity_selector{
+	  border: 1px solid #999;
+	  width:40px;
+	  height:25px;
+	  text-align:left;
+	  padding-left:5px;
+	}
+	
 	.price-number{
 		color: #333333;
 		font-weight: bold;
