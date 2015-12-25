@@ -21,7 +21,9 @@ h1{
 }
 
 #wrapper_products{
-  width:100%;
+  float:left;
+  width:66%;
+  margin-right:2%;
   border:1px #CCC solid;
   padding:25px;
   margin-bottom:45px;
@@ -30,10 +32,13 @@ h1{
 }
 
 #wrapper_send_info{
+  float:left;
+  width:32%;
   border:1px #CCC solid;
   padding:25px;
   background-color: white;
   border-radius:5px;
+  margin-bottom:45px;
 }
 
 h1, h2{
@@ -41,19 +46,57 @@ h1, h2{
   margin-top:0px !important;
 }
 
-#wrapper_send_info input, #wrapper_send_info select{
+#wrapper_send_data input[type="text"]{
   border: 1px #CCC solid;
   padding:5px;
-  margin-left:15px;
-  width:94%;
+  margin-left:5px;
+  width:100%;
+}
+
+#wrapper_send_info label{
+  width:65%;
+}
+
+#wrapper_send_info input{ 
+  text-align:left;
+  width:20%;
+}
+
+#wrapper_send_info select{
+   text-align:left;
+   width:30%;
+   border: 1px #CCC solid;
+}
+
+#wrapper_send_info input[type="number"]{
+  border: 1px #CCC solid;
+  padding:5px;
 }
 
 #wrapper_send_info select option{
    padding:5px;
 }
 
-#wrapper_send_info div{
+#wrapper_send_info div, #wrapper_send_data div{
   margin-bottom:15px;
+}
+
+#wrapper_send_cost {
+  float:left;
+  width:45%;
+}
+
+#wrapper_send_data{
+  width:50%;
+  border:1px #CCC solid;
+  padding:25px;
+  background-color: white;
+  border-radius:5px;
+  margin:0 auto;
+}
+
+table{
+  width:100%;
 }
 
 table, td, th{
@@ -79,6 +122,14 @@ td, th {
   border:none !important;
   margin-top:25px;
   float:right;
+  text-align:center !important;
+}
+
+.product_quantity{
+  width:35px;
+  border:1px #999 solid;
+  text-align:right;
+  padding:4px 1px 4px 5px;
 }
 
 

@@ -111,7 +111,7 @@ $row	=	mysql_fetch_array($resultado, MYSQL_ASSOC);
 
 echo '<tr>';
 echo '<td rowspan="1" class="poster_mini"><p>'. $row['poster'] . '<p><img src="assets/images/posters01.jpg" /></td>';
-echo '<td>' . $cookie_value .  '</td>';
+echo '<td><input type="number" min="1" max="999" step="1" class="product_quantity" id="quantity_' . $cookie_name . '" value="' . $cookie_value .  '"/></td>';
 echo '<td>' . $row['medidas'] .  '</td>';
 echo '<td>' . $row['precio'] .  ' (USD ' . $row['preciod'] . ')</td>';
 //echo '<td>Coste de Envío Nacional</td><td>' . $row['costo'] .  '</td>';
@@ -129,41 +129,17 @@ echo '</tr>';
 	
 <div id="wrapper_send_info">
 		
-		<h2>Información de Envío</h2>
+		<h2>Información del Envío</h2>
 		
+		<form action="shopping_step2.php" method="POST" target="_self">
 		<div>
-		<label for="name">Nombre</label>
-		<input type="text" name="name">
+		<label>Subtotal</label>
+		<input type="text" readonly="readonly" value="USD 125" />
 		</div>
 		
 		<div>
-		<label for="surename">Apellidos</label>
-		<input type="text" name="surename">
-		</div>
-		
-		<div>
-		<label for="address">Dirección (calle, plaza, ...)</label>
-		<input type="text" name="address">
-		</div>
-		
-		<div>
-		<label for="address">Provincia</label>
-		<input type="text" name="address">
-		</div>
-		
-		<div>
-		<label for="address">Localidad</label>
-		<input type="text" name="address">
-		</div>
-		
-		<div>
-		<label for="address">Código Postal</label>
-		<input type="text" name="address">
-		</div>
-		
-		<div>
-		<label for="address">País</label>
-		<input type="text" name="address">
+		<label>Número de tubos</label>
+		<input type="number" min="1" max="999" step="1" value="1" />
 		</div>
 		
 		<div>
@@ -177,52 +153,22 @@ echo '</tr>';
 		</select>
 		</div>
 		
+		<div>
+		<label>Gastos de envío</label>
+		<input type="text" readonly="readonly" value="USD 50" />
+		</div>
+		
+		<div>
+		<label>Total</label>
+		<input type="text" readonly="readonly" value="USD 175" />
+		</div>
+		
+		<input type="submit" id="checkout" value="CONTINUAR">
+		</form>
+</div>
 		
 		
 		
-		
-		
-		
-<!-- Paypal submit -->
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-
-<fieldset>
-<input type="hidden" name="shipping" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '1'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[7];
-};
-?>">
-<input type="hidden" name="cbt" value="Su operación a sido exitosa">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="rm" value="2">
-<input type="hidden" name="bn" value="Patagonia Posters">
-<input type="hidden" name="business" value="info@patagoniaposters.cl">
-<input type="hidden" name="item_name" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '1'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[1];
-};
-?>">
-<input type="hidden" name="amount" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '1'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[8];
-};
-?>">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="image_url" value="">
-<input type="hidden" name="return" value="http://patagoniaposters.cl">
-<input type="hidden" name="cancel_return" value="http://patagoniaposters.cl">
-<input type="hidden" name="no_shipping" value="1">
-<input type="submit" id="checkout" value="COMPRAR">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-</div>		
 
 </div>	
 <!-- Bootstrap core JavaScript
@@ -270,22 +216,6 @@ echo	$row[8];
 <!-- Custom js-->
 <script type="text/javascript" src="js/reversal-custom_default.js"></script>
 <script src='jquery.zoom.js'></script>
-<script>
-$(document).ready(function () {
-$('#ex1').zoom();
-$('#ex01').zoom();
-$('#ex02').zoom();
-$('#ex03').zoom();
-$('#ex04').zoom();
-$('#ex05').zoom();
-$('#ex06').zoom();
-$('#ex07').zoom();
-$('#ex08').zoom();
-$('#ex2').zoom({on: 'grab'});
-$('#ex3').zoom({on: 'click'});
-$('#ex4').zoom({on: 'toggle'});
-});
-</script>
 </body>
 </html>
 

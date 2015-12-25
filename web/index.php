@@ -148,7 +148,7 @@ include_once	'db_connection.php';
 <li><a href="#pack">promociones</a></li>
 <li><a href="#envio">Precios</a></li>
 <li><a href="#contacto">Contacto</a></li>
-<li>	<a href="shopping.php" id="shopping_cart"></a></li>
+<li>	<a href="shopping_step1.php" id="shopping_cart"></a></li>
 </ul>
 </div><!--/.nav-collapse -->
 </div>

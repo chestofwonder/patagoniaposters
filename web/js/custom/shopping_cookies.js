@@ -6,7 +6,7 @@ $(document).ready(function(){
  // Add poster to shopping cart
  $('.add_shooping_bag').on('click', function(){
 //alert($(this).prop('id'));return;
-    $.removeCookie('www.patagoniaposters.cl:' + $(this).prop('id'));return;
+    //$.removeCookie('www.patagoniaposters.cl:' + $(this).prop('id'));return;
     add_shopping_cart_cookies($(this).prop('id'), $('#quantity_' + $(this).prop('id')).val());
 });
 
