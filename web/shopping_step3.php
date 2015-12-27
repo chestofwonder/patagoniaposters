@@ -52,9 +52,27 @@
 </head>
 <body>
 <script>
-  dataLayer = [{
-    }];
-  </script>
+dataLayer = [{
+    'transactionId': '[Server Variable]', // Transaction ID - Type:String - Required 
+    'transactionAffiliation': '[Server Variable]', // store name - Type:String - Optional to use
+    'transactionTotal': [Server Variable], //total revenue - Type:Numeric - Required
+    'transactionTax': [Server Variable], // Tax amount for transaction - Type:Numeric - Optional to use
+    'transactionShipping': [Server Variable], // Shipping cost - Type:Numeric - Optional to use
+    'transactionProducts': [{
+        'sku': '[Server Variable]', // Product SKU - Type:String - Required 
+        'name': '[Server Variable]', // Product Name - Type:String - Required 
+        'category': '[Server Variable]', // Product Category - Type:String - Optional to use
+        'price': [Server Variable], // Product Price - Type:Numeric - Required 
+        'quantity': [Server Variable] // Product Quantity - Type:Numeric - Required 
+    },{
+        'sku': '[Server Variable]', // Product SKU - Type:String - Required 
+        'name': '[Server Variable]', // Product Name - Type:String - Required
+        'category': '[Server Variable]',  // Product Category - Type:String - Optional to use
+        'price': [Server Variable], // Product Price - Type:Numeric - Required 
+        'quantity': [Server Variable] // Product Quantity - Type:Numeric - Required 
+    }]
+}];
+</script>
 
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PX9S45"
