@@ -48,9 +48,24 @@
 <link href="css/demo.css" rel="stylesheet">
 <script src="js/jquery.js"></script>
 <script src="js/swtch/jquery.cookie.js"></script>
-<script type="text/javascript" src="js/custom/shopping_cookies.js"></script>
+<script type="text/javascript" src="js/custom/shopping.js"></script>
 </head>
 <body>
+<script>
+  dataLayer = [{
+    }];
+  </script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PX9S45"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PX9S45');</script>
+<!-- End Google Tag Manager -->
+
 
 <?php
 // Database initialization. Create $conn var and selects "tagoni81_datos" database

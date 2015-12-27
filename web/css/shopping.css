@@ -57,6 +57,11 @@ h1, h2{
   width:65%;
 }
 
+#wrapper_send_info .currency{
+  width:35px !important;
+  font-weight: normal;
+}
+
 #wrapper_send_info input{ 
   text-align:left;
   width:20%;
@@ -113,6 +118,10 @@ td, th {
   padding: 20px !important;
 }
 
+td{
+  text-align: center;
+}
+
 
 #checkout{
   width:100px !important;
@@ -125,7 +134,7 @@ td, th {
   text-align:center !important;
 }
 
-.product_quantity{
+.product_quantity input{
   width:35px;
   border:1px #999 solid;
   text-align:right;

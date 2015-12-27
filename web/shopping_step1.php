@@ -48,9 +48,24 @@
 <link href="css/demo.css" rel="stylesheet">
 <script src="js/jquery.js"></script>
 <script src="js/swtch/jquery.cookie.js"></script>
-<script type="text/javascript" src="js/custom/shopping_cookies.js"></script>
+<script type="text/javascript" src="js/custom/shopping.js"></script>
 </head>
 <body>
+<script>
+  dataLayer = [{
+    }];
+  </script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PX9S45"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PX9S45');</script>
+<!-- End Google Tag Manager -->
+
 
 <?php
 // Database initialization. Create $conn var and selects "tagoni81_datos" database
@@ -86,18 +101,21 @@ internacionalp (precio de envio internacional en pesos)
 ?>
 <div id="wrapper">
 			<br/>
-		<h1>CESTA DE LA COMPRA</h1>
+		<h1>CARRITO DE LA COMPRA</h1>
 		<br/>
 		<br/>
 <div id="wrapper_products">
 		<h2>Productos</h2>
 		
-<table>
+<table id="table_products">
 		<tr>
 				<th>Producto</th>
 				<th>Cantidad</th>
 				<th>Medidas</th>
-				<th>Precio</th>
+				<th>Precio<br/>(Envío nacional)</th>
+				<th>Precio<br/>(Envío internacional)</th>
+				<!-- <th>Coste de Envío (Nacional)</th>
+				<th>Coste de Envío (Internacional)</th> -->
 		</tr>
 <?php
 foreach($_COOKIE as $cookie_name => $cookie_value){
@@ -110,12 +128,20 @@ $resultado	=	mysql_query($sql);
 $row	=	mysql_fetch_array($resultado, MYSQL_ASSOC);
 
 echo '<tr>';
-echo '<td rowspan="1" class="poster_mini"><p>'. $row['poster'] . '<p><img src="assets/images/posters01.jpg" /></td>';
-echo '<td><input type="number" min="1" max="999" step="1" class="product_quantity" id="quantity_' . $cookie_name . '" value="' . $cookie_value .  '"/></td>';
-echo '<td>' . $row['medidas'] .  '</td>';
-echo '<td>' . $row['precio'] .  ' (USD ' . $row['preciod'] . ')</td>';
-//echo '<td>Coste de Envío Nacional</td><td>' . $row['costo'] .  '</td>';
-//echo '<td>Coste de Envío Internacional</td><td>' . $row['internacional'] .  ' (USD ' .  $row['internacionalp'] . ')</td>';
+echo '<td class="poster_mini" rowspan="1"><p>'. $row['poster'] . '<p><img src="assets/images/posters0' . $poster_id . '.jpg" /></td>';
+echo '<td class="product_quantity" ><input type="number" min="1" max="999" step="1" id="quantity_' . $cookie_name . '" value="' . $cookie_value .  '"/></td>';
+echo '<td class="size">' . $row['medidas'] .  '</td>';
+
+$precio_nac = str_replace('$ch', '', $row['precio']);
+$precio_nac = str_replace('.', '', $precio_nac);
+echo '<td class="price_nacional">' . $precio_nac .  '</td>';
+
+$precio_int = str_replace('USD', '', $row['preciod']);
+$precio_int = str_replace('.', '', $precio_int);
+echo '<td class="price_internacional">' . $precio_int . '</td>';
+
+/* echo '<td>' . $row['costo'] .  '</td>';
+echo '<td>' . $row['internacional'] .  ' (USD ' .  $row['internacionalp'] . ')</td>'; */
 echo '</tr>';
 
 }
@@ -134,17 +160,17 @@ echo '</tr>';
 		<form action="shopping_step2.php" method="POST" target="_self">
 		<div>
 		<label>Subtotal</label>
-		<input type="text" readonly="readonly" value="USD 125" />
+		<label class="currency"></label><input type="text"  id="subtotal"  readonly="readonly" value="125" />
 		</div>
 		
 		<div>
 		<label>Número de tubos</label>
-		<input type="number" min="1" max="999" step="1" value="1" />
+		<input type="number" id="packaging_quantity" min="1" max="999" step="1" value="1" />
 		</div>
 		
 		<div>
-		<label for="zone">Zona de envío</label>
-		<select name="zone">
+		<label for="sending_zone">Zona de envío</label>
+		<select id="sending_zone" name="sending_zone">
 				<option>América 1</option>
 				<option>América 2</option>
 				<option>Europa</option>
@@ -155,12 +181,12 @@ echo '</tr>';
 		
 		<div>
 		<label>Gastos de envío</label>
-		<input type="text" readonly="readonly" value="USD 50" />
+		<label class="currency"></label><input type="text" id="sending_costs" readonly="readonly" value="50" />
 		</div>
 		
 		<div>
 		<label>Total</label>
-		<input type="text" readonly="readonly" value="USD 175" />
+		<label class="currency"></label><input type="text" id="total" readonly="readonly" value="" />
 		</div>
 		
 		<input type="submit" id="checkout" value="CONTINUAR">

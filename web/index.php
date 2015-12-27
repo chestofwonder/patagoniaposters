@@ -49,7 +49,7 @@
 
 <script src="js/jquery.js"></script>
 <script src="js/swtch/jquery.cookie.js"></script>
-<script type="text/javascript" src="js/custom/shopping_cookies.js"></script>
+<script type="text/javascript" src="js/custom/shopping.js"></script>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -72,24 +72,24 @@ font-style: italic;
 font-style: italic;
 }
 </style>
-<script>
-(function (i, s, o, g, r, a, m) {
-i['GoogleAnalyticsObject'] = r;
-i[r] = i[r] || function () {
-(i[r].q = i[r].q || []).push(arguments)
-}, i[r].l = 1 * new Date();
-a = s.createElement(o),
-								m = s.getElementsByTagName(o)[0];
-a.async = 1;
-a.src = g;
-m.parentNode.insertBefore(a, m)
-})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-ga('create', 'UA-54613307-1', 'auto');
-ga('send', 'pageview');
-
-</script>
 </head>
+
+<body>
+<script>
+  dataLayer = [{
+    }];
+  </script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PX9S45"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PX9S45');</script>
+<!-- End Google Tag Manager -->
+
 
 <?php
 // Database initialization. Create $conn var and selects "tagoni81_datos" database
@@ -98,8 +98,7 @@ include_once	'db_connection.php';
 }
 ?>
 
-<body>
-		
+
 <div id="container">
 
 <!--  Outer wrapper for presentation only, this can be anything you like -->
@@ -563,7 +562,7 @@ echo	" "	.	$row[7];
 <div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_1" min="1" max="999" step="1" value="1"></div>
 </div>
 
-<input type="button" class="add_shooping_bag" data="poster1" id="add_poster_1" value="Añadir a la cesta" />
+<input type="button" class="add_shooping_bag" data="poster1" id="add_poster_1" value="Añadir al carrito" />
 
 <!-- <td><a href="form/poster1.html" target="_new"><img src="assets/images/btns/btn_otromedio.png" width="70" height="70"></a></td> -->
 
@@ -716,7 +715,7 @@ echo	" "	.	$row[7];
 <div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_2" min="1" max="999" step="1" value="1"></div>
 </div>
 
-<input type="button" class="add_shooping_bag" data="poster2" id="add_poster_2" value="Añadir a la cesta" />
+<input type="button" class="add_shooping_bag" data="poster2" id="add_poster_2" value="Añadir al carrito" />
 
 
 </div>
@@ -867,7 +866,7 @@ echo	" "	.	$row[7];
 <div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_3" min="1" max="999" step="1" value="1"></div>
 </div>
 
-<input type="button" class="add_shooping_bag" data="poster3" id="add_poster_3" value="Añadir a la cesta" />
+<input type="button" class="add_shooping_bag" data="poster3" id="add_poster_3" value="Añadir al carrito" />
 
 </div>
 
@@ -1018,7 +1017,7 @@ echo	" "	.	$row[7];
 <div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_4" min="1" max="999" step="1" value="1"></div>
 </div>
 
-<input type="button" class="add_shooping_bag" data="poster4" id="add_poster_4" value="Añadir a la cesta" />
+<input type="button" class="add_shooping_bag" data="poster4" id="add_poster_4" value="Añadir al carrito" />
 
 </div>
 
@@ -1170,7 +1169,7 @@ echo	" "	.	$row[7];
 <div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_5" min="1" max="999" step="1" value="1"></div>
 </div>
 
-<input type="button" class="add_shooping_bag" data="poster5" id="add_poster_5" value="Añadir a la cesta" />
+<input type="button" class="add_shooping_bag" data="poster5" id="add_poster_5" value="Añadir al carrito" />
 </div>
 
 </div>
@@ -1321,7 +1320,7 @@ echo	" "	.	$row[7];
 <div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_6" min="1" max="999" step="1" value="1"></div>
 </div>
 
-<input type="button" class="add_shooping_bag" data="poster6" id="add_poster_6" value="Añadir a la cesta" />
+<input type="button" class="add_shooping_bag" data="poster6" id="add_poster_6" value="Añadir al carrito" />
 
 </div>
 
@@ -1472,7 +1471,7 @@ echo	" "	.	$row[7];
 <div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_7" min="1" max="999" step="1" value="1"></div>
 </div>
 
-<input type="button" class="add_shooping_bag" data="poster7" id="add_poster_7" value="Añadir a la cesta" />
+<input type="button" class="add_shooping_bag" data="poster7" id="add_poster_7" value="Añadir al carrito" />
 </div>
 
 </div>
@@ -1627,7 +1626,7 @@ echo	" "	.	$row[7];
 <div class="author-descrip"><input type="number" class="quantity_selector" id="quantity_add_poster_8" min="1" max="999" step="1" value="1"></div>
 </div>
 
-<input type="button" class="add_shooping_bag" data="poster8" id="add_poster_8" value="Añadir a la cesta" />
+<input type="button" class="add_shooping_bag" data="poster8" id="add_poster_8" value="Añadir al carrito" />
 
 </div>
 
