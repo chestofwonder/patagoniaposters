@@ -46,7 +46,7 @@ h1, h2{
   margin-top:0px !important;
 }
 
-#wrapper_send_data input[type="text"]{
+#wrapper_send_data input[type="text"], #wrapper_send_data input[type="email"]{
   border: 1px #CCC solid;
   padding:5px;
   margin-left:5px;
@@ -57,9 +57,9 @@ h1, h2{
   width:65%;
 }
 
-#wrapper_send_info .currency{
+.currency, .prize, .ch_currency, .USD_currency {
   width:35px !important;
-  font-weight: normal;
+  font-weight: normal !important;
 }
 
 #wrapper_send_info input{ 
@@ -98,6 +98,13 @@ h1, h2{
   background-color: white;
   border-radius:5px;
   margin:0 auto;
+}
+
+#wrapper_send_data textarea{
+  text-align:left;
+  width:100%;
+  border: 1px #CCC solid;
+  resize: none;
 }
 
 table{
@@ -140,6 +147,12 @@ td{
   text-align:right;
   padding:4px 1px 4px 5px;
 }
+
+
+#warning_message_fields, #warning_message_check{
+  color:red;
+}
+
 
 
 

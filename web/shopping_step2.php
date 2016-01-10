@@ -76,85 +76,131 @@ include_once	'db_connection.php';
 		
 <div id="wrapper">
 			<br/>
-		<h1>CESTA DE LA COMPRA</h1>
+		<h1>CARRITO DE LA COMPRA</h1>
 		<br/>
 		<br/>
-	
+
 <div id="wrapper_send_data">
 		
 		<h2>Datos de Envío</h2>
 		
 		<div>
-		<label for="name">Nombre</label>
-		<input type="text" name="name">
+		<label>Nombre</label>
+		<input class="required_data_field" type="text" tabindex="1">
 		</div>
 		
 		<div>
-		<label for="surename">Apellidos</label>
-		<input type="text" name="surename">
+		<label>Apellidos</label>
+		<input class="required_data_field" type="text">
+		</div>
+		
+	 <div>
+		<label>Correo electrónico</label>
+		<input class="required_data_field" type="email">
 		</div>
 		
 		<div>
-		<label for="address">Dirección (calle, plaza, ...)</label>
-		<input type="text" name="address">
+		<label>Dirección de envío</label>
+		<textarea class="required_data_field" type="text" rows="4"></textarea>
 		</div>
 		
 		<div>
-		<label for="address">Provincia</label>
-		<input type="text" name="address">
+		<label>Provincia</label>
+		<input class="required_data_field" type="text">
 		</div>
 		
 		<div>
 		<label for="address">Localidad</label>
-		<input type="text" name="address">
+		<input class="required_data_field" type="text">
 		</div>
 		
 		<div>
 		<label for="address">Código Postal</label>
-		<input type="text" name="address">
+		<input class="required_data_field" type="text">
 		</div>
 		
 		<div>
 		<label for="address">País</label>
-		<input type="text" name="address">
+		<input class="required_data_field" type="text">
+		</div>
+		
+		<div id="warning_message_fields">
+				<label>Por favor, rellena todos los campos</label>
 		</div>
 	
 		<div>
-				<input type="checkbox" />
-				<label>He leído y acepto las condiciones legales</label>
+				<input class="required_data_checkbox" type="checkbox" />
+				<label>He leído y acepto las <a href="send_conditions.html" target="_self">condiciones de envío</a></label>
 		</div>
 		
-<!-- Paypal submit -->
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<div id="warning_message_check">
+				<label>Tienes que aceptar las condiciones de envío para poder hacer el pedido</label>
+		</div>
 
-<fieldset>
-<input type="hidden" name="shipping" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '1'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[7];
-};
-?>">
+<!-- Paypal submit -->
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" onsubmit="return validateShopping()">
+<input type="hidden" name="cmd" value="_cart">
 <input type="hidden" name="cbt" value="Su operación a sido exitosa">
-<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="upload" value="1">
 <input type="hidden" name="rm" value="2">
 <input type="hidden" name="bn" value="Patagonia Posters">
 <input type="hidden" name="business" value="info@patagoniaposters.cl">
-<input type="hidden" name="item_name" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '1'";
+
+<?php
+
+$nacional = $_POST["sending_zone"] === "América 1" ? true : false; 
+if( $nacional ){
+$currency = "USD";
+}else{
+$currency = "USD";
+}
+
+echo '<input type="hidden" name="currency_code" value="' . $currency . '">'; //\$ch
+
+$sending_cost = str_replace('.', '', $_POST["sending_costs"]);
+$sending_cost = floatval(str_replace(',', '.', $sending_cost));
+$sending_cost = number_format((float)$sending_cost, 2, ".", "");
+
+$unitary_shipping_cost = $sending_cost / $_COOKIE["total_products"];
+$unitary_shipping_cost = round($unitary_shipping_cost, 2);
+
+$product_count = 0;
+
+foreach( $_COOKIE as $cookie_name => $cookie_value ){
+
+if( strpos($cookie_name,'www_patagoniaposters_cl:add_poster_') !== false ){
+if( $cookie_value > 0){
+$poster_id = substr($cookie_name,	$cookie_name.lenght - 1,	1);
+mysql_query("set names 'utf8'");
+$sql	=	"SELECT * FROM panel WHERE id = '" . $poster_id . "'";
 $resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[1];
-};
-?>">
-<input type="hidden" name="amount" value="<?php
-$sql	=	"SELECT * FROM panel WHERE id = '1'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	$row[8];
-};
-?>">
-<input type="hidden" name="currency_code" value="USD">
+$row	=	mysql_fetch_array($resultado, MYSQL_ASSOC);
+
+$product_count++;
+
+echo '<input type="hidden" name="item_name_' . $product_count . '" value="' . $row["poster"] . '">';
+
+$amount = 0;
+if( $nacional ){
+$amount = str_replace('$ch', '', $row['precio']);
+$amount = str_replace('.', '', $amount);
+//$amount = number_format($amount, 0, ",", ".");
+}else{
+$amount = str_replace('USD', '', $row['preciod']);
+$amount = str_replace('.', '', $amount);
+//$amount = number_format($amount, 0, ",", ".");
+}
+echo '<input type="hidden" name="amount_' . $product_count . '" value="' . $amount . '">';
+
+echo '<input type="hidden" name="quantity_' . $product_count . '" value="' . $cookie_value . '">';
+
+echo '<input type="hidden" name="shipping_' . $product_count . '" value="' . $unitary_shipping_cost . '">';
+}
+}
+
+}
+
+?>	
 <input type="hidden" name="image_url" value="">
 <input type="hidden" name="return" value="http://patagoniaposters.cl">
 <input type="hidden" name="cancel_return" value="http://patagoniaposters.cl">
@@ -162,7 +208,7 @@ echo	$row[8];
 <input type="submit" id="checkout" value="COMPRAR">
 <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
 </form>
-
+<div style="clear:both"></div>
 </div>		
 
 		

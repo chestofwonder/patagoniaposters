@@ -72,33 +72,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 if	(file_exists('db_connection.php'))	{
 include_once	'db_connection.php';
 }
-
-// Sacar el contenido del carrito
-/* 1.- sacar el contenido de las cookies
-*  2.- buscar el poster en bbdd y pintarlos
- * 
- * Agrupar el carrito por paquetes
- * 
- * Seleccionar destino
- * 
- * Calcular coste
- * 1.- sumar coste de los poster
- * 2.- calcular gastos de envio por peso y destino
- * 
- * Crear boton de paypal y pasarle los datos
- */
-/*
-
-*/
-//["www_patagoniaposters_cl:add_poster_1"]=> string(1) "1"
-
-/*
-internacional (precio de envio internacional en dolares)
-nacionald (no se usa, es costo)
-internacionalp (precio de envio internacional en pesos)
-*/
-
 ?>
+
 <div id="wrapper">
 			<br/>
 		<h1>CARRITO DE LA COMPRA</h1>
@@ -112,15 +87,14 @@ internacionalp (precio de envio internacional en pesos)
 				<th>Producto</th>
 				<th>Cantidad</th>
 				<th>Medidas</th>
-				<th>Precio<br/>(Envío nacional)</th>
-				<th>Precio<br/>(Envío internacional)</th>
-				<!-- <th>Coste de Envío (Nacional)</th>
-				<th>Coste de Envío (Internacional)</th> -->
+				<th>Precio<br/>(Nacional)</th>
+				<th>Precio<br/>(Internacional)</th>
 		</tr>
 <?php
 foreach($_COOKIE as $cookie_name => $cookie_value){
 
 if( strpos($cookie_name,'www_patagoniaposters_cl:add_poster_') !== false){
+if($cookie_value > 0){
 $poster_id = substr($cookie_name,	$cookie_name.lenght - 1,	1);
 mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '" . $poster_id . "'";
@@ -128,22 +102,23 @@ $resultado	=	mysql_query($sql);
 $row	=	mysql_fetch_array($resultado, MYSQL_ASSOC);
 
 echo '<tr>';
+
 echo '<td class="poster_mini" rowspan="1"><p>'. $row['poster'] . '<p><img src="assets/images/posters0' . $poster_id . '.jpg" /></td>';
-echo '<td class="product_quantity" ><input type="number" min="1" max="999" step="1" id="quantity_' . $cookie_name . '" value="' . $cookie_value .  '"/></td>';
+echo '<td class="product_quantity" ><input type="number" min="0" max="999" step="1" id="quantity_' . $cookie_name . '" value="' . $cookie_value .  '"/></td>';
 echo '<td class="size">' . $row['medidas'] .  '</td>';
 
 $precio_nac = str_replace('$ch', '', $row['precio']);
 $precio_nac = str_replace('.', '', $precio_nac);
-echo '<td class="price_nacional">' . $precio_nac .  '</td>';
+$precio_nac = number_format($precio_nac, 0, ",", ".");
+echo '<td class="price_nacional"><label class="ch_currency">$ch</label><label class="prize">' . $precio_nac .  '</label></td>';
 
 $precio_int = str_replace('USD', '', $row['preciod']);
 $precio_int = str_replace('.', '', $precio_int);
-echo '<td class="price_internacional">' . $precio_int . '</td>';
+$precio_int = number_format($precio_int, 0, ",", ".");
+echo '<td class="price_internacional"><label class="USD_currency">USD</label><label class="prize">' . $precio_int . '</label></td>';
 
-/* echo '<td>' . $row['costo'] .  '</td>';
-echo '<td>' . $row['internacional'] .  ' (USD ' .  $row['internacionalp'] . ')</td>'; */
 echo '</tr>';
-
+}
 }
 
 }
@@ -158,16 +133,23 @@ echo '</tr>';
 		<h2>Información del Envío</h2>
 		
 		<form action="shopping_step2.php" method="POST" target="_self">
+		
+		<div id="packaging_quantity_div">
+		<label>Tubos de pósters</label>
+		<input type="text" id="packaging_quantity" value="" />
+		</div>
+				
+		<div id="packaging_quantity_collections_div">
+		<label>Carpetas de colecciones</label>
+		<input type="text" id="packaging_quantity_collections" value="" />
+		</div>
+		
 		<div>
 		<label>Subtotal</label>
-		<label class="currency"></label><input type="text"  id="subtotal"  readonly="readonly" value="125" />
+		<label class="currency"></label>
+		<input type="text"  id="subtotal" name="subtotal" readonly="readonly" value="125" />
 		</div>
-		
-		<div>
-		<label>Número de tubos</label>
-		<input type="number" id="packaging_quantity" min="1" max="999" step="1" value="1" />
-		</div>
-		
+				
 		<div>
 		<label for="sending_zone">Zona de envío</label>
 		<select id="sending_zone" name="sending_zone">
@@ -181,7 +163,8 @@ echo '</tr>';
 		
 		<div>
 		<label>Gastos de envío</label>
-		<label class="currency"></label><input type="text" id="sending_costs" readonly="readonly" value="50" />
+		<label class="currency"></label>
+		<input name="sending_costs" data-toggle="popover" data-html="true" data-placement="bottom" data-trigger="focus" title="Peso excedido para el envío por correo" data-content="" type="text" id="sending_costs" readonly="readonly" value="" />
 		</div>
 		
 		<div>
