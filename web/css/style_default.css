@@ -6004,10 +6004,27 @@ background-color: transparent;
   position:relative;
 }
 
+.shopping_cart_icon_landing_page{
+  position:absolute !important;
+  top:20px !important;
+  right:40px !important;
+  padding:10px !important;
+  font-size:2em !important;
+   color:#666 !important;
+}
+
+.shopping_cart_icon_landing_page:hover{
+  cursor:pointer !important;
+  color:white !important;
+  background-color:#62A69F !important;
+}
+
 #shopping_cart_icon:hover{
   cursor:pointer;
   color:white;
 }
+
+
 
 #shopping_cart{
   font-family: "Lato";
@@ -6016,11 +6033,17 @@ background-color: transparent;
   color:#FFF;
   position:absolute;
   top:15px;  
-  right:-5px;;
+  right:-5px;
   border: 1px solid #F1826A;
   border-radius:50%;
   background-color:#F1826A;
   margin:0px !important;
   padding:10px !important;
   line-height: 0px !important;
+}
+
+.shopping_cart_landing_page{
+  position:absolute;
+  top:5px !important; 
+  right:-5px !important;
 }
