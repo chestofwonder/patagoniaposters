@@ -19,8 +19,9 @@ include_once	'../db_connection.php';
 <h3>www.patagoniaposters.cl</h3>
 
 <div class="group">
-<form action="order_request.php" method="POST">
+		<form action="../shopping_step3.php" method="POST">
 <br>
+<input type="hidden" name="ref" value="request" />
 <label for="nombre">Nombre / name <span>(requerido)</span></label>
 <input type="text" name="nombre" class="form-input" required/>
 <label for="mail">Email<span>(requerido)</span></label>

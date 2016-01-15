@@ -74,7 +74,7 @@ include_once	'db_connection.php';
 }
 ?>
 
-<?php var_dump($_COOKIE['lang']); ?>
+<?php //var_dump($_COOKIE['lang']); ?>
 
 <div id="wrapper">
 			<br/>
@@ -176,7 +176,7 @@ echo '</tr>';
 
 	
 		<input type="image" id="checkout" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-		<a href="form/poster2.html" id="checkout_other_payment" target="_self"><img src="assets/images/btns/btn_otromedio.png"></a>
+		<a href="form/request_form.php" id="checkout_other_payment" target="_self"><img src="assets/images/btns/btn_otromedio.png"></a>
 		</form>
 </div>
 		

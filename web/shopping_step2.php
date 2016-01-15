@@ -142,7 +142,7 @@ $nacional = $_POST["sending_zone"] === "América 1" ? true : false;
 if( $nacional ){
 $currency = "USD";
 ?>
-<form action="shopping_step3.php" method="post" target="_top" onsubmit="return validateShopping()">
+<form action="shopping_step3.php" method="POST" onsubmit="return validateShopping()">
 <input type="image" id="checkout" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <?php
 
