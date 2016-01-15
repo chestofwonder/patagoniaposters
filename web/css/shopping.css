@@ -131,14 +131,13 @@ td{
 
 
 #checkout{
-  width:100px !important;
-  padding: 15px 0 !important;
-  color: #FFF;
-  background-color: #F1826A;
-  border:none !important;
-  margin-top:25px;
-  float:right;
-  text-align:center !important;
+  width:70px !important;
+  float:left;
+}
+
+#checkout_other_payment{
+   float:left;
+   margin-left:25px;
 }
 
 .product_quantity input{
@@ -152,6 +151,7 @@ td{
 #warning_message_fields, #warning_message_check{
   color:red;
 }
+
 
 
 

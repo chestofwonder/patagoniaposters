@@ -82,7 +82,7 @@ include_once	'db_connection.php';
 
 <div id="wrapper_send_data">
 		
-		<h2>Datos de Envío</h2>
+		<h2>Déjanos tus datos para el envío</h2>
 		
 		<div>
 		<label>Nombre</label>
@@ -130,12 +130,26 @@ include_once	'db_connection.php';
 	
 		<div>
 				<input class="required_data_checkbox" type="checkbox" />
-				<label>He leído y acepto las <a href="send_conditions.html" target="_self">condiciones de envío</a></label>
+				<label>He leído y acepto las <a href="send_conditions.php" target="_self">condiciones de envío</a></label>
 		</div>
 		
 		<div id="warning_message_check">
 				<label>Tienes que aceptar las condiciones de envío para poder hacer el pedido</label>
 		</div>
+<?php
+
+$nacional = $_POST["sending_zone"] === "América 1" ? true : false; 
+if( $nacional ){
+$currency = "USD";
+?>
+<form action="shopping_step3.php" method="post" target="_top" onsubmit="return validateShopping()">
+<input type="image" id="checkout" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<?php
+
+}else{
+
+$currency = "USD";
+?>
 
 <!-- Paypal submit -->
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" onsubmit="return validateShopping()">
@@ -146,16 +160,9 @@ include_once	'db_connection.php';
 <input type="hidden" name="bn" value="Patagonia Posters">
 <input type="hidden" name="business" value="info@patagoniaposters.cl">
 
-<?php
 
-$nacional = $_POST["sending_zone"] === "América 1" ? true : false; 
-if( $nacional ){
-$currency = "USD";
-}else{
-$currency = "USD";
-}
 
-echo '<input type="hidden" name="currency_code" value="' . $currency . '">'; //\$ch
+<?php echo '<input type="hidden" name="currency_code" value="' . $currency . '">'; //\$ch
 
 $sending_cost = str_replace('.', '', $_POST["sending_costs"]);
 $sending_cost = floatval(str_replace(',', '.', $sending_cost));
@@ -202,12 +209,15 @@ echo '<input type="hidden" name="shipping_' . $product_count . '" value="' . $un
 
 ?>	
 <input type="hidden" name="image_url" value="">
-<input type="hidden" name="return" value="http://patagoniaposters.cl">
+<input type="hidden" name="return" value="shopping_step3.php">
 <input type="hidden" name="cancel_return" value="http://patagoniaposters.cl">
 <input type="hidden" name="no_shipping" value="1">
 <input type="submit" id="checkout" value="COMPRAR">
 <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
 </form>
+<?php
+}
+?>
 <div style="clear:both"></div>
 </div>		
 

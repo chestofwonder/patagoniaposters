@@ -95,8 +95,64 @@ include_once	'db_connection.php';
 <div id="wrapper">
 			
 		<h2>¡Gracias por tu compra!</h2>
+		Gracias por su pago. Su transacción ha finalizado y le hemos enviado un recibo de su compra por correo electrónico. Puede acceder a su cuenta en www.paypal.com para ver los detalles de esta transacción.
 		
-		
+<?php
+foreach( $_COOKIE as $cookie_name => $cookie_value ){
+
+if( strpos($cookie_name,'www_patagoniaposters_cl:add_poster_') !== false ){
+if( $cookie_value > 0){
+$poster_id = substr($cookie_name,	$cookie_name.lenght - 1,	1);
+mysql_query("set names 'utf8'");
+$sql	=	"SELECT * FROM panel WHERE id = '" . $poster_id . "'";
+$resultado	=	mysql_query($sql);
+$row	=	mysql_fetch_array($resultado, MYSQL_ASSOC);
+
+$product_count++;
+
+echo '<input type="hidden" name="item_name_' . $product_count . '" value="' . $row["poster"] . '">';
+
+$amount = 0;
+if( $nacional ){
+$amount = str_replace('$ch', '', $row['precio']);
+$amount = str_replace('.', '', $amount);
+//$amount = number_format($amount, 0, ",", ".");
+}else{
+$amount = str_replace('USD', '', $row['preciod']);
+$amount = str_replace('.', '', $amount);
+//$amount = number_format($amount, 0, ",", ".");
+}
+echo '<input type="hidden" name="amount_' . $product_count . '" value="' . $amount . '">';
+
+echo '<input type="hidden" name="quantity_' . $product_count . '" value="' . $cookie_value . '">';
+
+echo '<input type="hidden" name="shipping_' . $product_count . '" value="' . $unitary_shipping_cost . '">';
+}
+}
+
+}
+
+$productos = strip_tags($_POST['productos']);
+$nombre = strip_tags($_POST['nombre']);
+$mail = strip_tags($_POST['mail']);
+$consulta = strip_tags($_POST['consulta']);
+//$email_to = "julietafcanepa@gmail.com";
+$email_to = "goodooo30@gmail.com";
+$email_subject = "Solicitud de compra";
+
+$email_message .= "Carrito del cliente: \n\n";
+$email_message .= $productos . "\n";
+$email_message .= "\nDetalles del formulario de contacto:\n\n";
+$email_message .= "Nombre: " . $_POST['nombre'] . "\n";
+$email_message .= "E-mail: " . $_POST['mail'] . "\n";
+$email_message .= "Consulta: " . $_POST['consulta'] . "\n";
+
+
+$headers = 'From: '.$mail."\r\n".
+'Reply-To: '.$mail."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+$res = mail($email_to, $email_subject, $email_message, $headers);
+?>
 		
 </div>	
 <!-- Bootstrap core JavaScript

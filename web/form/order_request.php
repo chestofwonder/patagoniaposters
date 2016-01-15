@@ -20,5 +20,5 @@ $headers = 'From: '.$mail."\r\n".
 'Reply-To: '.$mail."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 $res = mail($email_to, $email_subject, $email_message, $headers);
-var_dump($res);
+
 

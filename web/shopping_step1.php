@@ -74,6 +74,8 @@ include_once	'db_connection.php';
 }
 ?>
 
+<?php var_dump($_COOKIE['lang']); ?>
+
 <div id="wrapper">
 			<br/>
 		<h1>CARRITO DE LA COMPRA</h1>
@@ -171,8 +173,10 @@ echo '</tr>';
 		<label>Total</label>
 		<label class="currency"></label><input type="text" id="total" readonly="readonly" value="" />
 		</div>
-		
-		<input type="submit" id="checkout" value="CONTINUAR">
+
+	
+		<input type="image" id="checkout" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		<a href="form/poster2.html" id="checkout_other_payment" target="_self"><img src="assets/images/btns/btn_otromedio.png"></a>
 		</form>
 </div>
 		

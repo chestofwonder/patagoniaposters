@@ -98,7 +98,6 @@ include_once	'db_connection.php';
 }
 ?>
 
-
 <div id="container">
 
 <!--  Outer wrapper for presentation only, this can be anything you like -->
@@ -1996,6 +1995,12 @@ $('#ex4').zoom({on: 'toggle'});
 });
 </script>
 
+<script>
+// Set lang cookie
+$.cookie('lang', 'es', { 
+	expires: 1, path: '/' 
+});
+</script>
 
 </body>
 </html>

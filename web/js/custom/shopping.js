@@ -221,12 +221,14 @@ function calc_sending_costs(){
       $('#sending_costs').val(formatNumber(resp));
       $('#sending_costs').popover('hide');
       $('#checkout').show();
+      $('#checkout_other_payment').show();
       calc_total();
     }else{
       $('#sending_costs').val("- - - - -");
       $('#sending_costs').attr('data-content', resp);
       $('#sending_costs').popover('show');
       $('#checkout').hide();
+      $('#checkout_other_payment').hide();
     }
   });
  

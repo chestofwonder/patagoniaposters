@@ -92,6 +92,8 @@ session_unset;
 								/* ahora creamos la tabla en html para mostrar los resultados
 									 agregandole un par de botones de radio */
 								echo	"
+<br/>
+<br/>
 		<p>PROMOCIONES</p>
 		
 		<form name='ejecuta' method='post' action='ejecuta2pro.php?lang=es'>
@@ -131,6 +133,8 @@ session_unset;
 	}
 								</script>
 
+<br/>
+<br/>
 								<p>PROMOCIONES</p>
 
 								<form name='ejecuta' method='post' action='ejecuta2.php/?table=promos' onsubmit="return validatePromosForm()">
@@ -167,6 +171,21 @@ session_unset;
 										<input type='submit' value='Aceptar' />
 										<input type='button' id='button_add_promo' value='Añadir otra promoción' />
 								</form>
-
+<br/>
+<br/>
+								<p>CONDICIONES DE ENVIO</p>
+								<form enctype="multipart/form-data" action="update_legal_conditions.php?lang='es" method="POST">
+													<table class='tabla'>
+												 <tr class='tabla1'>
+														<td>Condiciones de envío:</td>
+														<td><input type="hidden" name="MAX_FILE_SIZE" value="300000" /></td>
+														<td><input type="file" name="message" /></td>
+												 </tr>
+													</table>
+										<input type='submit' value='Aceptar'>
+								</form>
+								
+<br/>
+<br/>
 								</body>
 								</html>

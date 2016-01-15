@@ -3,14 +3,13 @@
 primero creamos nuestra conexion tanto con el 
 mysql, como con la base de datos, recuerda que 
 el nombre del host, del user y del pass los 
-debes de cambiar por los de tu configuración*/
+debes de cambiar por los de tu configuraciï¿½n*/
 
-$con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");
-if (! $con){die ("ERROR EN LA CONEXION CON MYSQL: ".mysql_error());}
+// Database initialization. Create $conn var and selects "tagoni81_datos" database
+if	(file_exists('../db_connection.php'))	{
+include_once	'../db_connection.php';
+}
 
-$base = mysql_select_db ("tagoni81_datos",$con);
-
-if(! $base){die ("ERROR AL CONECTAR CON LA BASE DE DATOS: ".mysql_error());}
 /********************************************
 iniciamos el ciclo con el que obtendremos lo que envio el formulario
 **************************************************************/
@@ -18,7 +17,7 @@ foreach ($_POST['seleccion'] as $indice => $valor){
 //Vamos a verificar si trae la opcion de eliminar o modificar
 $opcion = substr ($_POST['seleccion'][$indice],0,-1); //extraemos la parte de la cadena que elimina y/o modifica
 switch($opcion){
-//generamos la sentencia para la modificación filtrando por el id para que solo cambie ese registro
+//generamos la sentencia para la modificaciï¿½n filtrando por el id para que solo cambie ese registro
 	case 'modifica':$sql="UPDATE panel SET
 						  poster='".$_POST["poster"][$indice]."',
 						  stock='".$_POST["stock"][$indice]."',

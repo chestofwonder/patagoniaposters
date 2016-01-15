@@ -1646,6 +1646,11 @@ Think of that special place you have visited with your loved ones, that memorabl
 		});
 	</script>
 	
-
+<script>
+// Set lang cookie
+$.cookie('lang', 'en', { 
+	expires: 1, path: '/' 
+});
+</script>
 	</body>
 </html>
