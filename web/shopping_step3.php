@@ -126,6 +126,13 @@ $headers = 'From: '.$mail."\r\n".
 $res = mail($email_to, $email_subject, $email_message, $headers);
 var_dump($res);
 ?>
+
+			<div>
+				<br/>
+							<br/>
+										<br/>
+			<a href="/">Volver</a>
+		</div>
 		
 </div>	
 <!-- Bootstrap core JavaScript

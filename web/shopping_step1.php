@@ -155,11 +155,10 @@ echo '</tr>';
 		<div>
 		<label for="sending_zone">Zona de envío</label>
 		<select id="sending_zone" name="sending_zone">
-				<option>América 1</option>
-				<option>América 2</option>
-				<option>Europa</option>
-				<option>Asia</option>
-				<option>África/Oceanía</option>
+				<option value="america">América</option>
+				<option value="europa">Europa</option>
+				<option value="asia">Asia</option>
+				<option  value="africa_oceania">África/Oceanía</option>
 		</select>
 		</div>
 		

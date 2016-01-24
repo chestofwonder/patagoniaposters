@@ -319,17 +319,7 @@ echo	" "	.	$row[1]	.	"<br>";
 };
 ?>
 </h2>
-<div class="single-tab">
 
-<?php
-$sql	=	"SELECT * FROM panel WHERE id = '1'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[2]	.	"<br>";
-};
-?>
-
-</div>
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
@@ -469,17 +459,7 @@ while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
-<div class="single-tab">
 
-<?php
-$sql	=	"SELECT * FROM panel WHERE id = '2'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[2]	.	"<br>";
-};
-?>
-
-</div>
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
@@ -620,15 +600,6 @@ while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
-<div class="single-tab">
-<?php
-$sql	=	"SELECT * FROM panel WHERE id = '3'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[2]	.	"<br>";
-};
-?>
-</div>
 
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
@@ -771,15 +742,6 @@ echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
 
-<div class="single-tab">
-<?php
-$sql	=	"SELECT * FROM panel WHERE id = '4'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[2]	.	"<br>";
-};
-?>
-</div>
 
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
@@ -922,15 +884,6 @@ echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
 
-<div class="single-tab">
-<?php
-$sql	=	"SELECT * FROM panel WHERE id = '5'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[2]	.	"<br>";
-};
-?>
-</div>
 
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
@@ -1074,16 +1027,6 @@ echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
 
-<div class="single-tab">
-<?php
-$sql	=	"SELECT * FROM panel WHERE id = '6'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[2]	.	"<br>";
-};
-?>
-</div>
-
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
@@ -1225,16 +1168,6 @@ echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
 
-<div class="single-tab">
-<?php
-$sql	=	"SELECT * FROM panel WHERE id = '7'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[2]	.	"<br>";
-};
-?>
-</div>
-
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
@@ -1375,16 +1308,6 @@ while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[1]	.	"<br>";
 };
 ?></h2>
-
-<div class="single-tab">
-<?php
-$sql	=	"SELECT * FROM panel WHERE id = '8'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[2]	.	"<br>";
-};
-?>
-</div>
 
 <h3>Descripción y detalles</h3>
 <p class="single-text10">

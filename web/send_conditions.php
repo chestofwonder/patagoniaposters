@@ -96,18 +96,25 @@ include_once	'db_connection.php';
 			
 		<h1>SHIPMENT DISCLAIMER </h1>
 		
-<?php
-mysql_query("set names 'utf8'");
-$sql	=	"SELECT * FROM legal_conditions WHERE lang = 'es'";
-$resultado	=	mysql_query($sql);
-$row	=	mysql_fetch_array($resultado, MYSQL_ASSOC);
+								<?php 
+$myfile = fopen('panel/legal_conditions.txt', "r") or die("Se ha producido un error al abrir el archivo de condiciones legales!");
+echo '<div style="margin-left:65px; margin-top:20px; width:90%; height:400px; padding:1%;">';
+while(($line = fgets($myfile)) !== false){
+echo $line . '<br/>';
+}
+fclose($myfile);
+echo '</div>';
+								
+								?>
 
-//var_dump($row['message']);
-echo htmlentities($row['message'], ENT_COMPAT, UTF-8);
-?>
-		
-		
+		<div>
+				<br/>
+							<br/>
+										<br/>
+			<a href="shopping_step2.php">Lo he leído y acepto</a>
+		</div>
 </div>	
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
