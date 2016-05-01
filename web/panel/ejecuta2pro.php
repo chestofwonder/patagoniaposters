@@ -21,4 +21,4 @@ else{
 	echo $_GET['lang'] == 'es' ? "<a href='index.php'>Volver al panel</a>" : "<a href='ingles.php'>Volver al panel</a>";
 }
 }
-?>
+

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 13-04-2016 a las 15:22:18
+-- Tiempo de generación: 09-01-2016 a las 20:19:37
 -- Versión del servidor: 5.5.42
 -- Versión de PHP: 5.6.10
 
@@ -28,7 +28,6 @@ USE `patagoniaposters`;
 -- Estructura de tabla para la tabla `ingles`
 --
 
-DROP TABLE IF EXISTS `ingles`;
 CREATE TABLE IF NOT EXISTS `ingles` (
   `id` int(11) NOT NULL,
   `poster` varchar(255) NOT NULL,
@@ -57,31 +56,9 @@ INSERT INTO `ingles` (`id`, `poster`, `stock`, `descripcion`, `medidas`, `precio
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `legal_conditions`
---
-
-DROP TABLE IF EXISTS `legal_conditions`;
-CREATE TABLE IF NOT EXISTS `legal_conditions` (
-  `id_legal_condition` int(4) NOT NULL,
-  `lang` varchar(2) NOT NULL,
-  `message` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `legal_conditions`
---
-
-INSERT INTO `legal_conditions` (`id_legal_condition`, `lang`, `message`) VALUES
-(1, 'en', 'Before you pay those to me…\r\nI have to let you know the following:\r\n\r\nAround Christmas and New Year, I have sent several packages (all posters) to the US. All of them left Chile, but for some reason, some of them (6 at the moment) seem to be stuck in Miami (which is the airport they enter to, coming from Chile). \r\nSo, 6 packages got stuck and ALSO, one arrived broken in two halves (amazing, since the tube is very resistant!!) This is all within the States. I''ve had once, too, a problem with the Italian Post.\r\n\r\nThe way of shipment that I propose is INTERNATIONAL CERTIFIED SMALL PACKAGE, using the National Chilean Post Office within Chile. Once the package is in the country of destination, it becomes that country’s Post responsibility.\r\nI do not understand why they hold packages containig posters at the Customs for so long. Only some get stuck, some are even sent back to Chile!! \r\nBut the alternative is to use private POST and this costs around 80 us dollars for the same that you now pay 13 US dollars.\r\nI do not have YET a Liability Release Form within my web site. But through this e-mail you would have to accept that if you choose the Public POST, whatever happens with the USPS is not my responsibility.\r\nI do not like to have to do this, I am sorry.\r\nSorry for this long explanation.\r\n\r\nDO YOU AGREE that I send it to you as I usually do, and that if there is any problem with the package in the States you are in charge of filing claims, getting refunds, and all the process? (That is actually the rule, I can not do anything. The destination person is the USPS'' direct customer and the one that needs to go through all that process) I AM NOT RESPONSIBLE FOR THE SHIPMENT. Sending them is a service that I offer since I want to sell my prints :-)\r\n\r\nI am preventing any kind of misunderstanding. Still, it is possible that right now it is a better time of the year and nothing will happen. I mean it might all go more normally. (I had not had any problems before the mentioned ones, and I have been using the same system from January last year)\r\n\r\nPlease let me know if you agree, or if you would like to pay more and use other POST. \r\nBest regards,\r\n\r\nJulieta'),
-(2, 'es', 'SHIPMENT DISCLAIMER \n\nBefore you pay those to meâ€¦\nI have to let you know the following:\n\nAround Christmas and New Year, I have sent several packages (all posters) to the US. All of them left Chile, but for some reason, some of them (6 at the moment) seem to be stuck in Miami (which is the airport they enter to, coming from Chile).Â \nSo, 6 packages got stuck and ALSO, one arrived broken in two halves (amazing, since the tube is very resistant!!) This is all within the States. I''ve had once, too, a problem with the Italian Post.\n\nThe way of shipment that I propose is INTERNATIONAL CERTIFIED SMALL PACKAGE, using the National Chilean Post Office within Chile. Once the package is in the country of destination, it becomes that countryâ€™s Post responsibility.\nI do not understand why they hold packages containig posters at the Customs for so long. Only some get stuck, some are even sent back to Chile!! \nBut the alternative is to use private POST and this costs around 80 us dollars for the same that you now pay 13 US dollars.\nI do not have YET a Liability Release Form within my web site. But through this e-mail you would have to accept that if you choose the Public POST, whatever happens with the USPS is not my responsibility.\nI do not like to have to do this, I am sorry.\nSorry for this long explanation.\n\nDO YOU AGREE that I send it to you as I usually do, and that if there is any problem with the package in the States you are in charge of filing claims, getting refunds, and all the process? (That is actually the rule, I can not do anything. The destination person is the USPS'' direct customer and the one that needs to go through all that process) I AM NOT RESPONSIBLE FOR THE SHIPMENT. Sending them is a service that I offer since I want to sell my prints :-)\n\nI am preventing any kind of misunderstanding. Still, it is possible that right now it is a better time of the year and nothing will happen. I mean it might all go more normally. (I had not had any problems before the mentioned ones, and I have been using the same system from January last year)\n\nPlease let me know if you agree, or if you would like to pay more and use other POST.Â \nBest regards,\n\nJulieta');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `panel`
 --
 
-DROP TABLE IF EXISTS `panel`;
 CREATE TABLE IF NOT EXISTS `panel` (
   `id` int(11) NOT NULL,
   `poster` text COLLATE utf8_spanish_ci NOT NULL,
@@ -116,7 +93,6 @@ INSERT INTO `panel` (`id`, `poster`, `stock`, `descripcion`, `medidas`, `precio`
 -- Estructura de tabla para la tabla `panell`
 --
 
-DROP TABLE IF EXISTS `panell`;
 CREATE TABLE IF NOT EXISTS `panell` (
   `id` int(11) NOT NULL,
   `poster` text COLLATE utf8_spanish_ci NOT NULL,
@@ -151,7 +127,6 @@ INSERT INTO `panell` (`id`, `poster`, `stock`, `descripcion`, `medidas`, `precio
 -- Estructura de tabla para la tabla `paneng`
 --
 
-DROP TABLE IF EXISTS `paneng`;
 CREATE TABLE IF NOT EXISTS `paneng` (
   `id` int(11) NOT NULL,
   `poster` varchar(255) NOT NULL,
@@ -186,7 +161,6 @@ INSERT INTO `paneng` (`id`, `poster`, `stock`, `descripcion`, `medidas`, `precio
 -- Estructura de tabla para la tabla `promen`
 --
 
-DROP TABLE IF EXISTS `promen`;
 CREATE TABLE IF NOT EXISTS `promen` (
   `id` int(11) NOT NULL,
   `nombre` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
@@ -214,7 +188,6 @@ INSERT INTO `promen` (`id`, `nombre`, `descripcion`, `nacional`, `internacional`
 -- Estructura de tabla para la tabla `promociones`
 --
 
-DROP TABLE IF EXISTS `promociones`;
 CREATE TABLE IF NOT EXISTS `promociones` (
   `id` int(11) NOT NULL,
   `moneda` varchar(22) NOT NULL,
@@ -237,7 +210,6 @@ INSERT INTO `promociones` (`id`, `moneda`, `2x`, `3x`, `4x`) VALUES
 -- Estructura de tabla para la tabla `promos`
 --
 
-DROP TABLE IF EXISTS `promos`;
 CREATE TABLE IF NOT EXISTS `promos` (
   `id` int(11) NOT NULL,
   `nombre` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
@@ -254,7 +226,8 @@ CREATE TABLE IF NOT EXISTS `promos` (
 INSERT INTO `promos` (`id`, `nombre`, `descripcion`, `nacional`, `internacional`, `aclaracion`) VALUES
 (1, 'EDICIÓN ANTERIOR EN OFERTA', 'Lleva Grey, Puerto Natales, Torres en Invierno, Los Cuernos o Perito Moreno por sólo 12.000 $ cada uno más costo de env?o!!!! Hasta agotar edición anterior Y SI LLEVAS 4 PAGAS 3!!!', '$12.000 + envío', 'USD 20 + envío', 'Siempre 3 ofertas especiales para ti.'),
 (2, 'COLECCIÓN Peq. Formato, "sueltos"', 'Sueltos, comprando como m?nimo 3: "El Chalt?n", "Los Cuernos", "Perito Moreno", "Glaciar Grey" o "Torres al Amanecer" de la edici?n anterior. Hasta agotar stock !!!', '$3.000 + env?o', 'USD 5 + env?o', ''),
-(3, 'hasta 3 EN UN TUBO', 'Lleva 2 o 3 <i>posters</i> a elecci?n y paga UN SOLO COSTO DE ENV?O. Ahorra dinero!<br>\r\nHaz clic en comprar e indica los  <i>posters</i> de tu preferencia.', '2/3 posters + 1 env?o', '2/3 posters + 1 env?o', '');
+(3, 'hasta 3 EN UN TUBO', 'Lleva 2 o 3 <i>posters</i> a elecci?n y paga UN SOLO COSTO DE ENV?O. Ahorra dinero!<br>\r\nHaz clic en comprar e indica los  <i>posters</i> de tu preferencia.', '2/3 posters + 1 env?o', '2/3 posters + 1 env?o', ''),
+(4, 'la 4 español', 'la 4 espa?ol', 'la 4 espa?ol', 'la 4 espa?ol', '');
 
 -- --------------------------------------------------------
 
@@ -262,7 +235,6 @@ INSERT INTO `promos` (`id`, `nombre`, `descripcion`, `nacional`, `internacional`
 -- Estructura de tabla para la tabla `promos_info`
 --
 
-DROP TABLE IF EXISTS `promos_info`;
 CREATE TABLE IF NOT EXISTS `promos_info` (
   `id_promo_info` int(11) NOT NULL,
   `lang` varchar(2) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
@@ -280,38 +252,9 @@ INSERT INTO `promos_info` (`id_promo_info`, `lang`, `message`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tramos`
---
-
-DROP TABLE IF EXISTS `tramos`;
-CREATE TABLE IF NOT EXISTS `tramos` (
-  `id_tramo` int(4) NOT NULL,
-  `currency` varchar(10) NOT NULL DEFAULT '',
-  `america` float DEFAULT NULL,
-  `europa` float DEFAULT NULL,
-  `asia` float DEFAULT NULL,
-  `africa_oceania` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `tramos`
---
-
-INSERT INTO `tramos` (`id_tramo`, `currency`, `america`, `europa`, `asia`, `africa_oceania`) VALUES
-(1, 'ch', 5500, 6000, 7000, 6500),
-(1, 'usd', 8, 9, 10, 9.5),
-(2, 'ch', 8000, 8000, 9700, 9000),
-(2, 'usd', 12, 12, 14, 13),
-(3, 'ch', 11000, 13500, 16000, 14000),
-(3, 'usd', 16, 19, 23, 20);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id_user` int(4) NOT NULL,
   `user` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
@@ -334,12 +277,6 @@ INSERT INTO `users` (`id_user`, `user`, `password`) VALUES
 --
 ALTER TABLE `ingles`
   ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `legal_conditions`
---
-ALTER TABLE `legal_conditions`
-  ADD PRIMARY KEY (`id_legal_condition`);
 
 --
 -- Indices de la tabla `panel`
@@ -384,12 +321,6 @@ ALTER TABLE `promos_info`
   ADD PRIMARY KEY (`id_promo_info`);
 
 --
--- Indices de la tabla `tramos`
---
-ALTER TABLE `tramos`
-  ADD PRIMARY KEY (`id_tramo`,`currency`);
-
---
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
@@ -406,11 +337,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `ingles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
---
--- AUTO_INCREMENT de la tabla `legal_conditions`
---
-ALTER TABLE `legal_conditions`
-  MODIFY `id_legal_condition` int(4) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `panel`
 --

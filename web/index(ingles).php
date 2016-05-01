@@ -101,7 +101,16 @@ include_once	'db_connection.php';
 
         <!-- start Basic Jquery Slider -->
         <ul class="bjqs" id="inicio">
-		  <li><img src="assets/images/slide/slide_1.jpg" title="" alt=""></li>
+		<!--  <li><img src="assets/images/slide/slide_1.jpg" title="" alt=""></li> -->
+		  <li><img src="assets/images/slide/slide01.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide02.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide03.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide04.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide05.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide06.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide07.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide08.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide09.jpg" title="" alt=""></li>
 		          
         </ul>
         <!-- end Basic jQuery Slider -->

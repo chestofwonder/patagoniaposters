@@ -212,7 +212,7 @@ echo '<input type="hidden" name="shipping_' . $product_count . '" value="' . $un
 <input type="hidden" name="return" value="shopping_step3.php">
 <input type="hidden" name="cancel_return" value="http://patagoniaposters.cl">
 <input type="hidden" name="no_shipping" value="1">
-<input type="submit" id="checkout" value="COMPRAR">
+<input type="image" id="checkout" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
 </form>
 <?php

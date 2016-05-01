@@ -149,7 +149,7 @@ td{
 
 
 #warning_message_fields, #warning_message_check{
-  color:red;
+  color:red !important;
 }
 
 

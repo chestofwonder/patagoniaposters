@@ -343,7 +343,8 @@ img {
   height:auto;
 }
 #banner-fade{
-	z-index:2000;	}
+	z-index:2;	
+}
 
 .img-responsive {
   display: block;

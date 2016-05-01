@@ -100,23 +100,7 @@ include_once	'db_connection.php';
 
 <div id="container">
 
-<!--  Outer wrapper for presentation only, this can be anything you like -->
-<div id="banner-fade">
-
-<!-- start Basic Jquery Slider -->
-<ul class="bjqs" id="inicio">
-<li><img src="assets/images/slide/slide_1.jpg" title="" alt=""></li>
-
-</ul>
-<!-- end Basic jQuery Slider -->
-
-</div>
-<!-- End outer wrapper -->
-
-</div>
-
-
-<!-- Fixed navbar -->
+		<!-- Fixed navbar -->
 <nav class="light">
 <div class="navbar navbar-default navbar-static-top">
 <div class="container clearfix">
@@ -153,6 +137,33 @@ include_once	'db_connection.php';
 </div>
 </nav>
 <!--/ Fixed navbar -->
+
+
+<!--  Outer wrapper for presentation only, this can be anything you like -->
+<div id="banner-fade">
+
+<!-- start Basic Jquery Slider -->
+<ul class="bjqs" id="inicio">
+<li><img src="assets/images/slide/slide01.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide02.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide03.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide04.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide05.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide06.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide07.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide08.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/slide09.jpg" title="" alt=""></li>
+
+</ul>
+<!-- end Basic jQuery Slider -->
+
+</div>
+<!-- End outer wrapper -->
+
+</div>
+
+
+
 
 <!-- home page slide section-->
 
@@ -1789,17 +1800,34 @@ echo	" "	.	$row[8];
 <h5>COSTOS DE ENVÍO</h5>
 
 <p class="col-sm-6">
-POSTERS Y PROMOCIONES<br>
-Dentro de Chile<br>
+POSTERS Y PROMOCIONES
 <?php
-$sql	=	"SELECT * FROM panel WHERE id = '1'";
+/*$sql	=	"SELECT * FROM panel WHERE id = '1'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[6];
-};
-?><br>
-Resto del mundo<br>
+};*/
+$query = "SELECT * FROM tramos WHERE id_tramo = 1 AND currency = 'ch'";
+$result = mysql_query($query,	$con);
+$row_ch = mysql_fetch_assoc($result);
+$query = "SELECT * FROM tramos WHERE id_tramo = 1 AND currency = 'usd'";
+$result = mysql_query($query,	$con);
+$row_usd = mysql_fetch_assoc($result);
+?>
+<br>Dentro de Chile<br>
+<?php echo " \$ch " . $row_ch['america']; ?>
+<br>Europa<br>
+<?php echo " \$ch " . $row_ch['europa'];
+echo " (USD " . $row_usd['europa'] . ")"; ?>
+<br>Asia<br>
+<?php echo " \$ch " . $row_ch['asia'];
+echo " (USD " . $row_usd['asia'] . ")"; ?>
+<br>África/Oceanía<br>
+<?php echo " \$ch " . $row_ch['africa_oceania'];
+echo " (USD " . $row_usd['africa_oceania'] . ")"; ?>
 <?php
+
+/*
 $sql	=	"SELECT * FROM panel WHERE id = '1'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -1810,34 +1838,52 @@ $sql	=	"SELECT * FROM panel WHERE id = '1'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[7];
-};
-?>)<br>
+};*/
+?><br>
 Se envían en un tubo de cartón protector, con tapas.
 </p>
 <p class="col-sm-6">
-COLECCIÓN PEQUEÑO FORMATO<br>
-Dentro de Chile<br>
+COLECCIÓN PEQUEÑO FORMATO
 <?php
-$sql	=	"SELECT * FROM panel WHERE id = '8'";
+$query = "SELECT * FROM tramos WHERE id_tramo = 3 AND currency = 'ch'";
+$result = mysql_query($query,	$con);
+$row_ch = mysql_fetch_assoc($result);
+$query = "SELECT * FROM tramos WHERE id_tramo = 3 AND currency = 'usd'";
+$result = mysql_query($query,	$con);
+$row_usd = mysql_fetch_assoc($result);
+?>
+<br>Dentro de Chile<br>
+<?php echo " \$ch " . $row_ch['america']; ?>
+<br>Europa<br>
+<?php echo " \$ch " . $row_ch['europa'];
+echo " (USD " . $row_usd['europa'] . ")"; ?>
+<br>Asia<br>
+<?php echo " \$ch " . $row_ch['asia'];
+echo " (USD " . $row_usd['asia'] . ")"; ?>
+<br>África/Oceanía<br>
+<?php echo " \$ch " . $row_ch['africa_oceania'];
+echo " (USD " . $row_usd['africa_oceania'] . ")"; ?>
+<?php
+/*$sql	=	"SELECT * FROM panel WHERE id = '8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[6];
 };
-?><br>
+<br>
 Resto del mundo<br>
-<?php
-$sql	=	"SELECT * FROM panel WHERE id = '8'";
+
+/*$sql	=	"SELECT * FROM panel WHERE id = '8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[10];
 };
-?> (USD <?php
 $sql	=	"SELECT * FROM panel WHERE id = '8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[7];
-};
-?>)<br>
+};*/
+?>
+<br>
 Se envía en una carpeta protectora.<br>
 </p>
 
@@ -1973,6 +2019,7 @@ Consultar precios y tiempos de realización.
 <!-- Home slider js-->
 <script src="js/bjqs-1.3.min.js"></script>
 <script src="js/jquery.secret-source.min.js"></script>
+<script src="js/custom/slider.js"></script>
 <!--/ Home slider js-->
 
 <!-- Custom js-->

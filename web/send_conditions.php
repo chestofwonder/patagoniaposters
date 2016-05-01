@@ -107,11 +107,11 @@ echo '</div>';
 								
 								?>
 
-		<div>
+		<div style="margin-left:65px; margin-top:20px; width:90%; height:400px; padding:1%;">
 				<br/>
 							<br/>
 										<br/>
-			<a href="shopping_step2.php">Lo he leído y acepto</a>
+			<a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Lo he leído y acepto</a>
 		</div>
 </div>	
 
