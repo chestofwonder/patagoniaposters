@@ -326,8 +326,8 @@ jQuery(document).ready(function() {
 	
 		/*	Home Image Slider (Fade style) */
 		$('#banner-fade').bjqs({
-            height      : 320,
-            width       : 620,
+           /* height      : 320,
+            width       : 620,*/
             responsive  : true
           });
 		

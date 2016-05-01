@@ -144,15 +144,19 @@ include_once	'db_connection.php';
 
 <!-- start Basic Jquery Slider -->
 <ul class="bjqs" id="inicio">
-<li><img src="assets/images/slide/slide01.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/slide02.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/slide03.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/slide04.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/slide05.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/slide06.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/slide07.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/slide08.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/slide09.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/detalle_mi_cara.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/gral_CHA.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/gral_CHALTEN.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/juncos.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/LETRAS.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/MANO_otra.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/mochi_Transp.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/NUBE.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/PERITO_borrando.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/PERITOOO.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/Personajes.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/pintando_laguna.jpg" title="" alt=""></li>
+<li><img src="assets/images/slide/pintando_nube.jpg" title="" alt=""></li>
 
 </ul>
 <!-- end Basic jQuery Slider -->
