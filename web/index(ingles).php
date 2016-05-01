@@ -452,42 +452,42 @@ The Small Format posters are 4-colour (CMYK, Digital) printed on 350g, opaque <i
 								
 								<div class="col-sm-5 single-content">	
 									<div class="space1" style="display:none;"></div>
-									<h2><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+									<h2><?php $sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]."<br>"; };?></h2>
 									<div class="single-tab">
 									
-										<span class="tab-two"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<span class="tab-two"><?php $sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[2]."<br>"; };?></span>									
 										
 									</div>
 									<h3>DESCRIPTION AND DETAILS</h3>
 									<p class="single-text10">
- <?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>									</p>
+ <?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>									</p>
 									<div class="space1"></div>
 									<div class="author-info">
 										<div class="author-title">Dimensions</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"> <?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?>
+										<div class="author-descrip"> <?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?>
                                     </div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Price</div>
 									<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[5]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip"><?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[5]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[8]; };?>)</div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Shipping cost</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Within Chile <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Within Chile <?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[6]."<br>"; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title"></div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Rest of the World <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[10]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Rest of the World <?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[10]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[7]; };?>)</div>
 									</div>
 									<div class="author-info">
@@ -500,16 +500,16 @@ echo " ".$row[7]; };?>)</div>
   <tr>
  <td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <fieldset> 
-<input type="hidden" name="shipping" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="shipping" value="<?php $sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[7]; };?>"> 
 <input type="hidden" name="cbt" value="Su operación a sido exitosa"> 
 <input type="hidden" name="cmd" value="_xclick"> 
  <input type="hidden" name="rm" value="2"> 
  <input type="hidden" name="bn" value="Patagonia Posters"> 
 <input type="hidden" name="business" value="info@patagoniaposters.cl"> 
-<input type="hidden" name="item_name" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="item_name" value="<?php $sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]; };?>"> 
-<input type="hidden" name="amount" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="amount" value="<?php $sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[8]; };?>"> 
 <input type="hidden" name="currency_code" value="USD"> 
 <input type="hidden" name="image_url" value=""> 
@@ -569,42 +569,42 @@ echo $row[8]; };?>">
 								</div>
 								<div class="col-sm-5 single-content">	
 									<div class="space1" style="display:none;"></div>
-									<h2><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+									<h2><?php $sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]."<br>"; };?></h2>
 									<div class="single-tab">
 									
-										<span class="tab-two"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<span class="tab-two"><?php $sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[2]."<br>"; };?></span>								
 										
 									</div>
 									<h3>DESCRIPTION AND DETAILS</h3>
 									<p class="single-text10">
- <?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>									</p>
+ <?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>									</p>
 									<div class="space1"></div>
 									<div class="author-info">
 										<div class="author-title">Dimensions</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"> <?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?>
+										<div class="author-descrip"> <?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?>
                                     </div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Price</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[5]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip"><?php $sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[5]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[8]; };?>)</div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Shipping cost</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Within Chile <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Within Chile <?php $sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[6]."<br>"; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title"></div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Rest of the World  <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[10]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Rest of the World  <?php $sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[10]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[7]; };?>)</div>
 									</div>
 									<div class="author-info">
@@ -617,16 +617,16 @@ echo " ".$row[7]; };?>)</div>
   <tr>
  <td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <fieldset> 
-<input type="hidden" name="shipping" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="shipping" value="<?php $sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[7]; };?>"> 
 <input type="hidden" name="cbt" value="Su operación a sido exitosa"> 
 <input type="hidden" name="cmd" value="_xclick"> 
  <input type="hidden" name="rm" value="2"> 
  <input type="hidden" name="bn" value="Patagonia Posters"> 
 <input type="hidden" name="business" value="info@patagoniaposters.cl"> 
-<input type="hidden" name="item_name" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="item_name" value="<?php $sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]; };?>"> 
-<input type="hidden" name="amount" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="amount" value="<?php $sql = "SELECT * FROM paneng WHERE id = '2'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[8]; };?>"> 
 <input type="hidden" name="currency_code" value="USD"> 
 <input type="hidden" name="image_url" value=""> 
@@ -684,42 +684,42 @@ echo $row[8]; };?>">
 								
 								<div class="col-sm-5 single-content">	
 									<div class="space1" style="display:none;"></div>
-									<h2><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+									<h2><?php $sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]."<br>"; };?></h2>
 									<div class="single-tab">
 									
-										<span class="tab-two"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<span class="tab-two"><?php $sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[2]."<br>"; };?></span>
 										
 										
 									</div>
 									<h3>DESCRIPTION AND DETAILS</h3>
 									<p class="single-text10">
- <?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '3' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>									</p>
+ <?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '3' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>									</p>
 									<div class="space1"></div>
 									<div class="author-info">
 										<div class="author-title">Dimensions</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '3' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?></div>
+										<div class="author-descrip"><?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '3' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Price</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[5]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip"><?php $sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[5]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[8]; };?>)</div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Shipping cost</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Within Chile <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Within Chile <?php $sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[6]."<br>"; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title"></div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Rest of the World <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[10]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Rest of the World <?php $sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[10]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[7]; };?>)</div>
 									</div>
 									<div class="author-info">
@@ -732,16 +732,16 @@ echo " ".$row[7]; };?>)</div>
   <tr>
  <td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <fieldset> 
-<input type="hidden" name="shipping" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="shipping" value="<?php $sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[7]; };?>"> 
 <input type="hidden" name="cbt" value="Su operación a sido exitosa"> 
 <input type="hidden" name="cmd" value="_xclick"> 
  <input type="hidden" name="rm" value="2"> 
  <input type="hidden" name="bn" value="Patagonia Posters"> 
 <input type="hidden" name="business" value="info@patagoniaposters.cl"> 
-<input type="hidden" name="item_name" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="item_name" value="<?php $sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]; };?>"> 
-<input type="hidden" name="amount" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="amount" value="<?php $sql = "SELECT * FROM paneng WHERE id = '3'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[8]; };?>"> 
 <input type="hidden" name="currency_code" value="USD"> 
 <input type="hidden" name="image_url" value=""> 
@@ -799,11 +799,11 @@ echo $row[8]; };?>">
 								
 								<div class="col-sm-5 single-content">	
 									<div class="space1" style="display:none;"></div>
-									<h2><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+									<h2><?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]."<br>"; };?></h2>
 									<div class="single-tab">
 									
-										<span class="tab-two"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<span class="tab-two"><?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[2]."<br>"; };?></span>
 										
 										
@@ -811,32 +811,32 @@ echo " ".$row[2]."<br>"; };?></span>
 									<h3>DESCRIPTION AND DETAILS</h3>
                                     									<p class="single-text10">
 
- <?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>
+ <?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>
 									</p>
 									<div class="space1"></div>
 									<div class="author-info">
 										<div class="author-title">Dimensions</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?></div>
+										<div class="author-descrip"><?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Price</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[5]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip"><?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[5]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[8]; };?>)</div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Shipping cost</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Within Chile <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Within Chile <?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[6]."<br>"; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title"></div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Rest of the World <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[10]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Rest of the World <?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[10]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[7]; };?>)</div>
 									</div>
 									<div class="author-info">
@@ -849,16 +849,16 @@ echo " ".$row[7]; };?>)</div>
   <tr>
  <td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <fieldset> 
-<input type="hidden" name="shipping" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="shipping" value="<?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[7]; };?>"> 
 <input type="hidden" name="cbt" value="Su operación a sido exitosa"> 
 <input type="hidden" name="cmd" value="_xclick"> 
  <input type="hidden" name="rm" value="2"> 
  <input type="hidden" name="bn" value="Patagonia Posters"> 
 <input type="hidden" name="business" value="info@patagoniaposters.cl"> 
-<input type="hidden" name="item_name" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="item_name" value="<?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]; };?>"> 
-<input type="hidden" name="amount" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="amount" value="<?php $sql = "SELECT * FROM paneng WHERE id = '4'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[8]; };?>"> 
 <input type="hidden" name="currency_code" value="USD"> 
 <input type="hidden" name="image_url" value=""> 
@@ -917,43 +917,43 @@ echo $row[8]; };?>">
 								
 								<div class="col-sm-5 single-content">	
 									<div class="space1" style="display:none;"></div>
-									<h2><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+									<h2><?php $sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]."<br>"; };?></h2>
 									<div class="single-tab">
 									
-										<span class="tab-two"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<span class="tab-two"><?php $sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[2]."<br>"; };?></span>
 										
 										
 									</div>
 									<h3>DESCRIPTION AND DETAILS</h3>
 									<p class="single-text10">
- <?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>
+ <?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '4' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>
 									</p>
 									<div class="space1"></div>
 									<div class="author-info">
 										<div class="author-title">Dimensions</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '5' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?></div>
+										<div class="author-descrip"><?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '5' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Price</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[5]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip"><?php $sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[5]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[8]; };?>)</div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Shipping cost</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Within Chile <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Within Chile <?php $sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[6]."<br>"; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title"></div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Rest of the World <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[10]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Rest of the World <?php $sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[10]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[7]; };?>)</div>
 									</div>
 									<div class="author-info">
@@ -966,16 +966,16 @@ echo " ".$row[7]; };?>)</div>
   <tr>
  <td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <fieldset> 
-<input type="hidden" name="shipping" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="shipping" value="<?php $sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[7]; };?>"> 
 <input type="hidden" name="cbt" value="Su operación a sido exitosa"> 
 <input type="hidden" name="cmd" value="_xclick"> 
  <input type="hidden" name="rm" value="2"> 
  <input type="hidden" name="bn" value="Patagonia Posters"> 
 <input type="hidden" name="business" value="info@patagoniaposters.cl"> 
-<input type="hidden" name="item_name" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="item_name" value="<?php $sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]; };?>"> 
-<input type="hidden" name="amount" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="amount" value="<?php $sql = "SELECT * FROM paneng WHERE id = '5'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[8]; };?>"> 
 <input type="hidden" name="currency_code" value="USD"> 
 <input type="hidden" name="image_url" value=""> 
@@ -1034,42 +1034,42 @@ echo $row[8]; };?>">
 								
 								<div class="col-sm-5 single-content">	
 									<div class="space1" style="display:none;"></div>
-									<h2><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+									<h2><?php $sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]."<br>"; };?></h2>
 									<div class="single-tab">
 									
-										<span class="tab-two"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<span class="tab-two"><?php $sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[2]."<br>"; };?></span>
 										
 										
 									</div>
 									<h3>DESCRIPTION AND DETAILS</h3>
 									<p class="single-text10">
-<?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '6' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>									</p>
+<?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '6' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>									</p>
 									<div class="space1"></div>
 									<div class="author-info">
 										<div class="author-title">Dimensions</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '6' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?></div>
+										<div class="author-descrip"><?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '6' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Price</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[5]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip"><?php $sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[5]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[8]; };?>)</div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Shipping cost</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Within Chile <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Within Chile <?php $sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[6]."<br>"; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title"></div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Rest of the World <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[10]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Rest of the World <?php $sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[10]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[7]; };?>)</div>
 									</div>
 									<div class="author-info">
@@ -1082,16 +1082,16 @@ echo " ".$row[7]; };?>)</div>
   <tr>
  <td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <fieldset> 
-<input type="hidden" name="shipping" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="shipping" value="<?php $sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[7]; };?>"> 
 <input type="hidden" name="cbt" value="Su operación a sido exitosa"> 
 <input type="hidden" name="cmd" value="_xclick"> 
  <input type="hidden" name="rm" value="2"> 
  <input type="hidden" name="bn" value="Patagonia Posters"> 
 <input type="hidden" name="business" value="info@patagoniaposters.cl"> 
-<input type="hidden" name="item_name" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="item_name" value="<?php $sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]; };?>"> 
-<input type="hidden" name="amount" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="amount" value="<?php $sql = "SELECT * FROM paneng WHERE id = '6'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[8]; };?>"> 
 <input type="hidden" name="currency_code" value="USD"> 
 <input type="hidden" name="image_url" value=""> 
@@ -1149,41 +1149,41 @@ echo $row[8]; };?>">
 								
 								<div class="col-sm-5 single-content">	
 									<div class="space1" style="display:none;"></div>
-									<h2><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+									<h2><?php $sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]."<br>"; };?></h2>
 									<div class="single-tab">
 									
-										<span class="tab-two"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<span class="tab-two"><?php $sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[2]."<br>"; };?></span>
 										
 									</div>
 									<h3>DESCRIPTION AND DETAILS</h3>
 									<p class="single-text10">
-<?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '7' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>									</p>
+<?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '7' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>									</p>
 									<div class="space1"></div>
 									<div class="author-info">
 										<div class="author-title">Dimensions</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '7' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?></div>
+										<div class="author-descrip"><?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '7' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Price</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[5]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip"><?php $sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[5]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[8]; };?>)</div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Shipping cost</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Within Chile <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Within Chile <?php $sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[6]."<br>"; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title"></div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Rest of the World <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[10]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Rest of the World <?php $sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[10]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[7]; };?>)</div>
 									</div>
 									<div class="author-info">
@@ -1196,7 +1196,7 @@ echo " ".$row[7]; };?>)</div>
   <tr>
  <td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <fieldset> 
-<input type="hidden" name="shipping" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="shipping" value="<?php $sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[7]; };?>"> 
 <input type="hidden" name="cbt" value="Su operación a sido exitosa"> 
 <input type="hidden" name="cmd" value="_xclick"> 
@@ -1204,7 +1204,7 @@ echo $row[7]; };?>">
  <input type="hidden" name="bn" value="Patagonia Posters"> 
 <input type="hidden" name="business" value="info@patagoniaposters.cl"> 
 <input type="hidden" name="item_name" value="EL CHALTEN-MOUNT FITZ ROY"> 
-<input type="hidden" name="amount" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="amount" value="<?php $sql = "SELECT * FROM paneng WHERE id = '7'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[8]; };?>"> 
 <input type="hidden" name="currency_code" value="USD"> 
 <input type="hidden" name="image_url" value=""> 
@@ -1263,22 +1263,22 @@ echo $row[8]; };?>">
 								
 								<div class="col-sm-5 single-content">	
 									<div class="space1" style="display:none;"></div>
-									<h2><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+									<h2><?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]."<br>"; };?></h2>
 									<div class="single-tab">
 									
-										<span class="tab-two"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<span class="tab-two"><?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[2]."<br>"; };?></span>
 										
 									</div>
 									<h3>DESCRIPTION AND DETAILS</h3>
 									<p class="single-text10">
- <?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '8' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>									</p>
+ <?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '8' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[3]; };?>									</p>
 									<div class="space1"></div>
 									<div class="author-info">
 										<div class="author-title">Dimensions</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip-11"><?php header("Content-Type: text/html;charset=utf-8"); $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con); mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '8' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?></div>
+										<div class="author-descrip-11"><?php header("Content-Type: text/html;charset=utf-8");  mysql_query("set names 'utf8'"); $sql = "SELECT * FROM paneng WHERE id = '8' 'utf8'"; $resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[4]; };?></div>
                                         </div>
                                         <div class="author-info">
                                         <div class="author-title"></div>
@@ -1287,21 +1287,21 @@ echo " ".$row[2]."<br>"; };?></span>
 									<div class="author-info">
 										<div class="author-title">Price</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip"><?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[5]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip"><?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[5]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[8]; };?>)</div>
 									</div>
 									<div class="author-info">
 										<div class="author-title">Shipping cost</div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Within Chile <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Within Chile <?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[6]."<br>"; };?></div>
 									</div>
 									<div class="author-info">
 										<div class="author-title"></div>
 										<div class="clear" style="display:none;"></div>
-										<div class="author-descrip">Rest of the World <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[10]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+										<div class="author-descrip">Rest of the World <?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[10]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[7]; };?>)</div>
 									</div>
 									<div class="author-info">
@@ -1314,16 +1314,16 @@ echo " ".$row[7]; };?>)</div>
   <tr>
  <td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <fieldset> 
-<input type="hidden" name="shipping" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="shipping" value="<?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[7]; };?>"> 
 <input type="hidden" name="cbt" value="Su operación a sido exitosa"> 
 <input type="hidden" name="cmd" value="_xclick"> 
  <input type="hidden" name="rm" value="2"> 
  <input type="hidden" name="bn" value="Patagonia Posters"> 
 <input type="hidden" name="business" value="info@patagoniaposters.cl"> 
-<input type="hidden" name="item_name" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="item_name" value="<?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[1]; };?>"> 
-<input type="hidden" name="amount" value="<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<input type="hidden" name="amount" value="<?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo $row[8]; };?>"> 
 <input type="hidden" name="currency_code" value="USD"> 
 <input type="hidden" name="image_url" value=""> 
@@ -1457,13 +1457,15 @@ while	($row	=	mysql_fetch_array($resultado,	MYSQL_ASSOC))	{ ?>
 						<p class="col-sm-6">
 							POSTERS<br>
 
-<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[5]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<?php //
+$sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[5]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[8]; };?>)
 						</p>
                         <p class="col-sm-6">
 							SMALL FORMAT COLLECTION<br>
-<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[5]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+<?php //
+$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ echo " ".$row[5]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[8]; };?>)<br>
 						</p>
                         
@@ -1474,25 +1476,68 @@ echo " ".$row[8]; };?>)<br>
 						<h5>SHIPPING COST</h5>
                         
 						<p class="col-sm-6">
-							POSTERS AND SPECIAL SALES<br>
-Within Chile <br>
-<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+							POSTERS AND SPECIAL SALES
+<?php
+$query = "SELECT * FROM tramos WHERE id_tramo = 1 AND currency = 'ch'";
+$result = mysql_query($query,	$con);
+$row_ch = mysql_fetch_assoc($result);
+$query = "SELECT * FROM tramos WHERE id_tramo = 1 AND currency = 'usd'";
+$result = mysql_query($query,	$con);
+$row_usd = mysql_fetch_assoc($result);
+?>
+<br>Within Chile <br>
+<?php echo " \$ch " . $row_ch['america']; ?>
+<br>Europe<br>
+<?php echo " \$ch " . $row_ch['europa'];
+echo " (USD " . $row_usd['europa'] . ")"; ?>
+<br>Asia<br>
+<?php echo " \$ch " . $row_ch['asia'];
+echo " (USD " . $row_usd['asia'] . ")"; ?>
+<br>Africa/Oceania<br>
+<?php echo " \$ch " . $row_ch['africa_oceania'];
+echo " (USD " . $row_usd['africa_oceania'] . ")"; ?>
+
+  <?php 
+/*
+$sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[6]; };?><br>
 Rest of the World<br>
-<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[10]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[7]; };?>)<br>
+<?php $sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[10]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '1'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[7]; };*/?>
+<br>
+
 They are sent in a tube with base and lid.
 						</p>
                         <p class="col-sm-6">
-							SMALL FORMAT COLLECTION<br>
-Within Chile<br>
-<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+							SMALL FORMAT COLLECTION
+
+<?php /*$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
 echo " ".$row[6]; };?><br>
 Rest of the World<br>
-<?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[10]; };?> (USD <?php $con = mysql_connect("localhost", "tagoni81_usuario", "Usuario1234");$base = mysql_select_db ("tagoni81_datos",$con);$sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
-echo " ".$row[7]; };?>)<br>
+<?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[10]; };?> (USD <?php $sql = "SELECT * FROM paneng WHERE id = '8'";$resultado = mysql_query($sql);while ($row = mysql_fetch_row($resultado)){ 
+echo " ".$row[7]; };*/?>
+<?php 
+$query = "SELECT * FROM tramos WHERE id_tramo = 3 AND currency = 'ch'";
+$result = mysql_query($query,	$con);
+$row_ch = mysql_fetch_assoc($result);
+$query = "SELECT * FROM tramos WHERE id_tramo = 3 AND currency = 'usd'";
+$result = mysql_query($query,	$con);
+$row_usd = mysql_fetch_assoc($result);
+?>
+<br>Within Chile <br>
+<?php echo " \$ch " . $row_ch['america']; ?>
+<br>Europe<br>
+<?php echo " \$ch " . $row_ch['europa'];
+echo " (USD " . $row_usd['europa'] . ")"; ?>
+<br>Asia<br>
+<?php echo " \$ch " . $row_ch['asia'];
+echo " (USD " . $row_usd['asia'] . ")"; ?>
+<br>Africa/Oceania<br>
+<?php echo " \$ch " . $row_ch['africa_oceania'];
+echo " (USD " . $row_usd['africa_oceania'] . ")"; ?>
+							<br>
 It is sent in a thick folder.<br>
 						</p>
                         
