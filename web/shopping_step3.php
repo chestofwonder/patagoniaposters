@@ -131,7 +131,7 @@
 		<br/>
 		<br/>
 		<br/>
-		<a href="/">Volver</a>
+		  <p><a href="/"> << Volver a la web</a></p>
 	  </div>
 
 	</div>	

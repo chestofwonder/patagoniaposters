@@ -86,6 +86,7 @@
 	  <br/>
 	  <h1>CARRITO DE LA COMPRA</h1>
 	  <br/>
+	  <p><a href="/"> << Volver a la web</a></p>
 	  <br/>
 	  <div id="wrapper_products">
 		<h2>Productos</h2>
