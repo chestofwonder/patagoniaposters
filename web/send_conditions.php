@@ -86,15 +86,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <?php
+$lang = $_GET['lang'];
+
 // Database initialization. Create $conn var and selects "tagoni81_datos" database
 if	(file_exists('db_connection.php'))	{
 include_once	'db_connection.php';
 }
+/*
+$sql	=	"SELECT message FROM legal_conditions WHERE lang = '" . $_GET['lang'] . "'";
+$resultado	=	mysql_query($sql);
+while	($row	=	mysql_fetch_row($resultado))	{
+$disclaimer = $row[0];
+}
+*/
 ?>
 		
 <div id="wrapper">
 			
-		<h1>SHIPMENT DISCLAIMER </h1>
+  <?php 
+ if($lang == 'es'){
+   echo '<h1>RENUNCIA DE RESPONSABILIDAD</h1>';
+ }else{
+   echo '<h1>SHIPMENT DISCLAIMER</h1>';
+ }
+?>
+	
 		
 								<?php 
 $myfile = fopen('panel/legal_conditions.txt', "r") or die("Se ha producido un error al abrir el archivo de condiciones legales!");
@@ -107,7 +123,7 @@ echo '</div>';
 								
 								?>
 
-		<div style="margin-left:65px; margin-top:20px; width:90%; height:400px; padding:1%;">
+		<div style="margin-left:65px; margin-top:190px; width:90%; height:400px; padding:1%;">
 				<br/>
 							<br/>
 										<br/>

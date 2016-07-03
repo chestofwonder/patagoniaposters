@@ -1,0 +1,427 @@
+/*******************
+Reversal Color Start
+******************************/
+	/* Menu Start*/
+	.sf-menu li.active {
+	background-color: #F1826A;
+	}
+	ul.sf-menu li.currents a {
+		color: #fff;
+	}
+	.sf-menu li.currents {
+		background-color: #F1826A;		
+	}
+	.navbar-static-top {		
+		border-color: #F1826A;		
+	}
+	.sf-menu li a{
+		color: #939598;	
+	}
+	ul.sf-menu li:hover a {		
+		color: #fff;
+	}
+	ul.sf-menu li:hover {
+	background-color: #62A69F;
+	}	
+	.navbar-default .navbar-nav > .active > a, 
+	.navbar-default .navbar-nav > li > a:hover, 
+	.navbar-default .navbar-nav > .active > a, 
+	.navbar-default .navbar-nav > .active > a:hover{
+		background-color: #ffd737;			
+	}
+	ul.sf-menu li ul li:hover {		
+		background-color: #353943;
+	}
+	ul.sf-menu li ul li a {
+	color: #353943!important;
+	}
+	ul.sf-menu li ul li:hover a {
+		color: #fff!important;
+	}
+	ul.sf-menu li ul li ul li a {
+		color: #353943 !important;
+	}
+	ul.sf-menu li ul li ul li a:hover {
+		color: #fff !important;
+	}
+	ul#second-sb li a{
+		color: #353943 !important;
+	}
+	ul#second-sb li a:hover{
+		color: #fff !important;
+		background-color: #353943;
+	}
+	.sf-menu li ul li a{
+		border-top: 1px solid #d0d4d6;
+	}
+	
+	/* Menu End*/
+	
+	
+	
+	/* Slider Start*/
+	
+	.tp-caption.large_text1 span{
+			color: #ffd737;
+		}
+	
+	/* Slider End*/
+	
+	
+	
+	/* More-Feathers Start*/	
+	.section-more-feathurs .feathurs-part .feathurs-icon{
+		background-image: url('../assets/images/six_angel_img1.png');				
+	}
+	.section-more-feathurs .feathurs-part .feathurs-icon:hover{
+		background-image: url('../assets/images/six_angel_img2.png');
+		
+	}
+	.section-more-feathurs .feathurs-part:hover .feathurs-icon{
+		background-image: url('../assets/images/six_angel_img2.png');			
+	}
+	.section-more-feathurs .feathurs-part .feathurs-icon a {		
+		color: #ffd737;	
+	}	
+	.section-more-feathurs .feathurs-part .feathurs-icon a:hover {		
+		color: #fff;	
+	}
+	.section-more-feathurs .feathurs-part h3:hover{			
+		color: #ffd737;		
+	}.section-more-feathurs .feathurs-part:hover h3{		
+		color: #ffd737;		
+	}
+	.section-more-feathurs .feathurs-part span.more{
+		background-color: #ffd737;			
+	}
+	.section-more-feathurs .feathurs-part span.more:hover{
+		background-color: #353943;
+		color: #fff;			
+	}
+	.section-more-feathurs .feathurs-part:hover span.more{
+		background-color: #353943;
+		color: #fff;			
+	}
+	.section-more-feathurs .feathurs-part:hover a{
+		
+		color: #fff;			
+	}
+	/* More-Feathers End*/
+	
+	
+	/* Second Header Start*/	
+	.section-second-header .second-header .buy-now span.buy-now-custome {	
+		color: #fff;
+		background-color: #ffd737;		
+	}
+	/* Second Header End*/
+	
+	
+	/* Service Start*/	
+	.mark{
+		background-image: url('../assets/images/trade_mark1.png');		
+	}
+	.header-title a{		
+		color: #353943;
+	}
+	.service-icon {
+		background-image: url('../assets/images/service_tab1.png');		
+	}	
+	.service-icon:hover {
+		background-image: url('../assets/images/service_tab2.png');		
+	}
+	.service-icon:hover .line{
+		background-image: url('../assets/images/service_tab3.png');		
+	}
+	.rtl .service-icon:hover .line {
+		background-image: url('../assets/images/service_tab3.png');		
+	}
+	.service-icon a{
+		color: #fff;		
+	}
+	.service-icon a:hover{
+		color: #fff;
+	}
+	/* Service End*/	
+	
+	/* Customers Start*/
+	.section-our-customers .header-title a{
+		color: #fff;
+	}	
+	.customers-line{
+		border-top: 2px solid #ffd737;		
+	}	
+	.section-our-customers .carousel-indicators .active {		
+		background-color: #ffd737;
+	}
+	/* Customers End*/	
+	
+	/* Feathers Work Start*/	
+	a.button.gray,
+	.filter li a.active {
+	background-color: #F1826A;
+	}	
+	a.button:hover,
+	.filter li a:hover,
+	.forms fieldset .btn-submit:hover,
+	.comment-form .btn-submit:hover,
+	.page-navi ul li a:hover,
+	.page-navi ul li a.current {
+		background: #62A69F;		
+	}
+	.items li a .overlay {   
+		background: #62A69F;	
+	}	
+	/* Feathers Work End*/	
+	
+	/* Client Start*/	
+	#carousel-example-client a.right{
+		background: url(../assets/images/arrow_right1.png) no-repeat;			
+	}
+	#carousel-example-client a:hover.right{
+		background: url(../assets/images/arrow_right2.png) no-repeat;				
+	}
+	#carousel-example-client a.left{
+		background: url(../assets/images/arrow_left1.png) no-repeat;			
+	}	
+	#carousel-example-client a:hover.left{
+		background: url(../assets/images/arrow_left2.png) no-repeat;			
+	}
+	/* Client End*/	
+	
+	/* Our Team Start*/	
+	.our-team:hover .projectinfo1{
+		background: #62A69F;		
+	}
+	.section-our-team-single .social-icon ul li a:hover{
+		color: #62A69F;		
+	}
+	.section-our-team-single .social-icon ul li:hover{		
+		background-image: url('../assets/images/six_angel_img7.png');		
+	}
+	/* Our Team End*/	
+	
+	/* Choose Network Start*/	
+	.twitter-icon{		
+		background-color: #353943;		
+	}
+	.twitter-icon a{		
+		color: #7be3ff;
+	}	
+	.twitter-icon a:hover{		
+		color: #7be3ff;
+	}
+	.social-icon ul li:hover a{
+		color: white;
+	}
+	.social-icon ul li a{
+		color: #333333;		
+	}
+	.social-icon ul li a:hover{
+		color: white;		
+	}
+	.section-choose-network{
+	background-image: url(../assets/images/bg_img5.jpg);
+	}
+	/* Choose Network End*/
+	
+	/* Recent Post Start*/
+	.content-image:hover .projectinfo{
+		background: #62A69F;		
+	}
+	.post-date{		
+		background-color: #62A69F;		
+	}
+	.post-comment{		
+		background-color: #353943;
+		color: #fff;		
+	}
+	.content-text h3{		
+		color: #333333;		
+	}
+	/* Recent Post End*/
+	
+	/* Price Start*/
+	.price-table .rate{
+	background-image: url(../assets/images/six_angel_img3.png);
+	}	
+	.price-table .rate:hover{
+	background-image: url(../assets/images/six_angel_img4.png);
+	}	
+	.price-table .rate:hover .rate-price{
+		color: #fff;	
+	}	
+	.price-table .rate:hover .rate-period{
+		color: #fff;	
+	}	
+	.price-table:hover .rate-period{
+		color: #fff;	
+	}
+	.price-table:hover .rate-price{
+		color: #fff;	
+	}
+	.price-table:hover .rate{
+		background-image: url('../assets/images/six_angel_img4.png');			
+	}	
+	.price-table:hover .btn-buy-now{		
+		background-color: #353943;		
+		border: 2px solid #c4c4c4;		
+	}
+	.btn-buy-now{
+	background-color: #62A69F;
+	border-top-color: #60A29B;
+	border-right-color: #60A29B;
+	border-bottom-color: #60A29B;
+	border-left-color: #60A29B;
+	}
+	/* Price End*/
+	
+	/* Contact Us Start*/
+	.btn-primary {		
+		background-color: #FFD737;
+		border-color: #FFD737;		
+	}
+	.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {		
+		background-color: #fbd025;
+		border-color: #fbd025;		
+	}
+	/* Contact Us End*/
+	
+	/* Copy Right Start*/
+	.section-footer-copyright{
+	background-color: #62A69F;
+	}
+	/* Copy Right End*/
+	
+	/* Portfolio Single Start*/
+	.single-content h2{		
+		color: #333333;		
+	}
+	.tab-one{
+		background-color: #333333;		
+		color: #fff;		
+	}
+	.single-tab{
+		background-color: #62A69F;				
+	}
+	.tab-three{
+		background-color: #333333;
+		color: #fff;		
+	}
+	.single-content h3{
+		color: #333333;		
+	}
+	/* Portfolio Single End*/
+	
+	/* Team Single Start*/
+	.section-our-team-single .our-team .single-second{		 
+		background-color: #62A69F;		
+	}
+	.section-our-team-single .single-details h2{			
+		color: #333333;		
+	}
+	/* Team Single End*/
+	
+	/* Blog Single Start*/
+	.read-more-btn{		
+		background-color: #62A69F;		
+		color: #333333;		
+	}		
+	.blog_pagination a:hover .blog_pagination_left_no { 		
+		background-color: #62A69F;
+	}
+	.active-page{		
+		background-color: #62A69F;
+	}
+	.active-right{		
+		background-color: #62A69F;
+	}	
+	.blog_pagination_right .glyph .fs1:hover {		
+		background-color: #62A69F;		
+	}
+	.panel-default > .panel-heading:hover {		
+		background-color: #62A69F;		
+	}
+	.accordion-sitebar{		
+		background-color: #62A69F;		
+	}	
+	.accordion-sitebar:hover{		
+		background-color: #353943;		
+	}	
+	.accordion-sitebar2{		
+		background-color: #62A69F;		
+	}	
+	.accordion-sitebar3{		
+		background-color: #62A69F;		
+	}	
+	.accordion-sitebar4{		
+		background-color: #62A69F;		
+	}
+	ul.cart_lavel li:hover{		
+		background-color: #62A69F;
+	}	
+	.blog-project h3{		
+		color: #333333;		
+	}	
+	.blg-accordion h3{	
+		color: #333333;		
+	}
+	.blog-project-image:hover .projectinfo2 {		
+		background: #ffd737;		
+	}
+	.tweet-first{		
+		color: #ffd737;		
+	}	
+	.tweet-second{		
+		color: #63e3ff;		
+	}	
+	.tweet-third{		
+		color: #939598;		
+	}
+	#carousel-example-blogsn a:hover.left {
+		background: url(../assets/images/arrow_left2.png) no-repeat;		
+	}
+	#carousel-example-blogsn a:hover.right {
+		background: url(../assets/images/arrow_right2.png) no-repeat;		
+	}
+	/* Blog Single End*/
+	
+	/* Blog Details Start*/
+	.blog-detail-text h3{		
+		color: #333333;
+	}
+	.comment_info1{		
+		color: #ffd737;
+	}
+	/* Blog Details End*/
+	
+	/* Img HTML start*/
+	.favicon_icon{
+		background: url(../assets/images/favicon.png) no-repeat;
+	}
+	.logo_main{
+		background: url(../assets/images/logo.png) no-repeat;		
+	}
+	.logo_3{
+		background: url(../assets/images/logo3.png) no-repeat;		
+	}	
+	.title_rs{
+		background: url(../assets/main_slide/slide1/title.png) no-repeat;		
+	}
+	.get_started{
+		background: url(../assets/main_slide/slide1/button-one.png) no-repeat;		
+	}	
+	.slide3_en{
+		color: #fff;		
+		background-color: #ffd737;		
+	}
+	/* Img HTML end*/
+	#chart-show{
+		color: #ffd737;		
+	}
+	.clr_welcome{
+		color: #ffd737;
+	}
+/*******************
+Reversal Color End
+******************************/

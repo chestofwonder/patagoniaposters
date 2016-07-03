@@ -99,8 +99,8 @@
 	  $nombre			 = strip_tags( $_POST[ 'nombre' ] );
 	  $mail			 = strip_tags( $_POST[ 'mail' ] );
 	  $consulta		 = strip_tags( $_POST[ 'consulta' ] );
-//$email_to = "julietafcanepa@gmail.com";
-	  $email_to		 = "goodooo30@gmail.com";
+	  $email_to = "julietafcanepa@gmail.com";
+	  //$email_to		 = "goodooo30@gmail.com";
 	  $email_subject	 = "Solicitud de compra";
 
 	  $email_message .= "Carrito del cliente: \n\n";

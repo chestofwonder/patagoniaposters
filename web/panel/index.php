@@ -272,7 +272,7 @@ echo '</tr>';
 <br/>
 <br/>
 								<p>CONDICIONES DE ENVIO</p>
-								<form enctype="multipart/form-data" action="update_legal_conditions.php?lang='es" method="POST">
+								<form enctype="multipart/form-data" action="update_legal_conditions.php?lang=es" method="POST">
 													<table class='tabla'>
 												 <tr class='tabla1'>
 														<td>Condiciones de envío:</td>

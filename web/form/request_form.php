@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
 	<title>Formulario de consulta</title>
 	<link rel="stylesheet" href="estilof.css" type="text/css" media="all">
 	<script src="../js/jquery.js"></script>
@@ -59,7 +60,7 @@
 		</div>
 		<div>
 		  <input class="required_data_checkbox" type="checkbox" />
-		  <label>He leído y acepto las <a href="../send_conditions.php" target="_self">condiciones de envío</a></label>
+		  <label>He leído y acepto las <a href="../send_conditions.php?lang=es" target="_self">condiciones de envío</a></label>
 		</div>
 
 		<input class="form-btn" name="submit" type="submit" value="Enviar" /> 

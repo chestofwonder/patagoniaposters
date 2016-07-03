@@ -50,6 +50,7 @@
 <script src="js/jquery.js"></script>
 <script src="js/swtch/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/custom/shopping.js"></script>
+<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -140,24 +141,23 @@ include_once	'db_connection.php';
 
 
 <!--  Outer wrapper for presentation only, this can be anything you like -->
-<div id="banner-fade">
 
+<div id="banner-fade">
 <!-- start Basic Jquery Slider -->
 <ul class="bjqs" id="inicio">
-<li><img src="assets/images/slide/detalle_mi_cara.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/gral_CHA.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/gral_CHALTEN.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/juncos.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/LETRAS.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/MANO_otra.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/mochi_Transp.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/NUBE.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/PERITO_borrando.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/PERITOOO.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/Personajes.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/pintando_laguna.jpg" title="" alt=""></li>
-<li><img src="assets/images/slide/pintando_nube.jpg" title="" alt=""></li>
-
+<li id="slide01"></li>
+<li id="slide02"></li>
+<li id="slide03"></li>
+<li id="slide04"></li>
+<li id="slide05"></li>
+<li id="slide06"></li>
+<li id="slide07"></li>
+<li id="slide08"></li>
+<li id="slide09"></li>
+<li id="slide10"></li>
+<li id="slide11"></li>
+<li id="slide12"></li>
+<li id="slide13"></li>
 </ul>
 <!-- end Basic jQuery Slider -->
 
@@ -496,11 +496,9 @@ echo	" "	.	$row[2]	.	"<br>";
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
-$sql	=	"SELECT * FROM panel WHERE id = '1' 'utf8'";
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
+$sql	=	"SELECT * FROM panel WHERE id = '1'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[3];
@@ -646,10 +644,8 @@ echo	" "	.	$row[2]	.	"<br>";
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '2' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -662,10 +658,8 @@ echo	" "	.	$row[3];
 <div class="author-title">Medidas</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip"> <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '2' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -796,10 +790,8 @@ echo	" "	.	$row[2]	.	"<br>";
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '3' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -812,10 +804,8 @@ echo	" "	.	$row[3];
 <div class="author-title">Medidas</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip"> <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '3' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -947,10 +937,8 @@ echo	" "	.	$row[2]	.	"<br>";
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '4' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -963,10 +951,8 @@ echo	" "	.	$row[3];
 <div class="author-title">Medidas</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip"> <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '4' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -1098,10 +1084,8 @@ echo	" "	.	$row[2]	.	"<br>";
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '4' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -1114,10 +1098,8 @@ echo	" "	.	$row[3];
 <div class="author-title">Medidas</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip"> <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '5' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -1250,10 +1232,8 @@ echo	" "	.	$row[2]	.	"<br>";
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '6' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -1266,10 +1246,8 @@ echo	" "	.	$row[3];
 <div class="author-title">Medidas</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip"> <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '6' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -1401,10 +1379,8 @@ echo	" "	.	$row[2]	.	"<br>";
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '7' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -1417,10 +1393,8 @@ echo	" "	.	$row[3];
 <div class="author-title">Medidas</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip"> <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '7' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -1552,10 +1526,8 @@ echo	" "	.	$row[2]	.	"<br>";
 <h3>Descripción y detalles</h3>
 <p class="single-text10">
 <?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '8' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -1569,10 +1541,8 @@ echo	" "	.	$row[3];
 <div class="author-title">Medidas</div>
 <div class="clear" style="display:none;"></div>
 <div class="author-descrip-11"><?php
-header("Content-Type: text/html;charset=utf-8");
-
-
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '8' 'utf8'";
 $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
@@ -1681,8 +1651,8 @@ echo	" "	.	$row[7];
 <h4>PROMOCIONES</h4>
 <p class="text5">
 <?php
-header("Content-Type: text/html;charset=utf-8");
-mysql_query("set names 'utf8'");
+//header("Content-Type: text/html;charset=utf-8");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM promos_info WHERE lang = 'es'";
 $resultado	=	mysql_query($sql);
 $row	=	mysql_fetch_array($resultado, MYSQL_ASSOC);
@@ -1928,10 +1898,16 @@ Julieta Fernández Cánepa
 
 <p class="disc-text4">
 +569 8343 1495 / +569 8747 9010
-</p><br><br><br><br>
-<p class="disc-text3">
+</p>
+<br><br><br><br><p class="disc-text3">
 SCROLL
 </p>
+<!--<p class="text5">
+<p><strong>Por favor considerar:</strong></p>
+Julieta responde las consultas personalmente. Debido a su trabajo como guía de trekking, la demora para recibir una respuesta puede ser de hasta 10 días. <br>También se puede encargar a la artista, la pintura de una obra original, única.<br>
+Ese lugar espectacular que visitaste con amigos o personas queridas, ese momento preciso, ese paisaje a esa hora del día... <br>Puede convertirse en TU <span class="italica_p">poster vintage</span>; una pintura original y no una reproducción impresa en papel.<br>
+Consultar precios y tiempos de realización.
+</p>-->
 <p class="disc-text8">
 V<br>v
 </p>

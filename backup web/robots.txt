@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /landing_peq_formato.php
+Disallow: /landing_page.php

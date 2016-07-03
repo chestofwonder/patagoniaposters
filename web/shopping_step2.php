@@ -131,7 +131,7 @@ include_once	'db_connection.php';
 	
 		<div>
 				<input class="required_data_checkbox" type="checkbox" />
-				<label>He leído y acepto las <a href="send_conditions.php" target="_self">condiciones de envío</a></label>
+				<label>He leído y acepto las <a href="send_conditions.php?lang='es'" target="_self">condiciones de envío</a></label>
 		</div>
 		
 		<div id="warning_message_check">
@@ -179,7 +179,7 @@ foreach( $_COOKIE as $cookie_name => $cookie_value ){
 if( strpos($cookie_name,'www_patagoniaposters_cl:add_poster_') !== false ){
 if( $cookie_value > 0){
 $poster_id = substr($cookie_name,	$cookie_name.lenght - 1,	1);
-mysql_query("set names 'utf8'");
+//mysql_query("set names 'utf8'");
 $sql	=	"SELECT * FROM panel WHERE id = '" . $poster_id . "'";
 $resultado	=	mysql_query($sql);
 $row	=	mysql_fetch_array($resultado, MYSQL_ASSOC);

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+
+<html>
+<body>
+
+<textarea>Holy smurfs!</textarea><br><button>Move cursor to end of textarea</button>
+<script>
+$("button").on("click", function() {
+  
+  // cache textarea as we need it more than once
+  var textarea = $("textarea"),
+      
+      // save old value as we need to clear it
+      val = textarea.val();
+  
+  // focus textarea, clear value, re-apply
+  textarea
+    .focus()
+    .val("")
+    .val(val);
+});
+</script>
+
+</body>
+
+</html>

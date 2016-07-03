@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<title>jQuery Zoom Demo</title>
+	<style>
+		/* styles unrelated to zoom */
+		p { position:absolute; top:3px; right:28px; color:#555; text-align:center; font:bold 13px/1 sans-serif;}
+		a { position:absolute; top:30px;  color:#555; margin:0 auto; font:bold 13px/1 sans-serif;}
+
+		/* these styles are for the demo, but are not required for the plugin */
+		.zoom {
+			display:block;
+			height:100%;
+			position: relative;
+		}
+		
+		/* magnifying glass icon */
+		.zoom:after {
+			content:'';
+			display:block; 
+			width:33px; 
+			text-align:center;
+			height:33px; 
+			position:absolute; 
+			top:0;
+			right:0;
+			background:url(icon.png);
+		}
+
+
+		.zoom img::selection { background-color: transparent; }
+
+		#ex2 img:hover { cursor: url(grab.cur), default; }
+		#ex2 img:active { cursor: url(grabbed.cur), default;}
+		.algo{
+			background:#33C;
+			height:100%;
+			width:600px;
+			margin:0 auto; 
+	
+			}
+
+
+	</style>
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+	<script src='jquery.zoom.js'></script>
+	<script>
+		$(document).ready(function(){
+			$('#ex1').zoom();
+			$('#ex2').zoom({ on:'grab' });
+			$('#ex3').zoom({ on:'click' });			 
+			$('#ex4').zoom({ on:'toggle' });
+		});
+	</script>
+</head>
+<body>
+<div class= "algo" >
+	<span class='zoom' id='ex1'>
+		<img src='posters01.png'  height="100%" alt='Daisy on the Ohoopee'  />
+		<p>Hover ldksandas</p>
+        <a> dasdasdsa </a>
+	</span>
+
+ </div>
+</body>
+</html>
