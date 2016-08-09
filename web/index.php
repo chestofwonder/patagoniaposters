@@ -159,6 +159,7 @@ include_once	'db_connection.php';
 <li id="slide11"></li>
 <li id="slide12"></li>
 <li id="slide13"></li>
+<li id="slide14"></li>
 </ul>
 <!-- end Basic jQuery Slider -->
 
