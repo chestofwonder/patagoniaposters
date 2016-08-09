@@ -11,6 +11,8 @@ session_unset;
 }
 ?>
 
+<?php setcookie("lang","en"); ?>
+
 <!DOCTYPE html> 
 <html>
 		<head>
@@ -149,7 +151,129 @@ session_unset;
 										<input type='submit' value='Aceptar' />
 										<input type='button' id='button_add_promo' value='Añadir otra promoción' />
 								</form>
+<br/>
+<br/>
+
+<p>COSTES DE ENVIO</p>
+<form action="update_sending_costs.php" method="POST">
+	<table class='tabla'>
+					<tr class='tabla1'>
+							<td>Tramo</td>
+							<td>América</td>
+							<td>Europa</td>
+							<td>Asia</td>
+							<td>África/Oceanía</td>
+			</tr>
+			
+<?php
+$query = "SELECT * FROM tramos WHERE id_tramo = 1 AND currency = 'ch'";
+$result = mysql_query($query,	$con);
+$row = mysql_fetch_assoc($result);
+
+echo '<tr>';
+echo '<td class="gris">0 - 250g</td>';
+echo '<td>$ch&nbsp;<input type="text" name="tramo1_america_ch" value = "' . $row['america'] . '" /></td>';
+echo '<td>$ch&nbsp;<input type="text" name="tramo1_europa_ch" value = "' . $row['europa'] . '" /></td>';
+echo '<td>$ch&nbsp;<input type="text" name="tramo1_asia_ch" value = "' . $row['asia'] . '" /></td>';
+echo '<td>$ch&nbsp;<input type="text" name="tramo1_africaoceania_ch" value = "' . $row['africa_oceania'] . '" /></td>';
+echo '</tr>';
 
 
-		</body>
-</html>
+$query = "SELECT * FROM tramos WHERE id_tramo = 1 AND currency = 'usd'";
+$result = mysql_query($query,	$con);
+$row = mysql_fetch_assoc($result);
+
+echo '<tr>';
+echo '<td></td>';
+echo '<td>USD<input type="text" name="tramo1_america_usd" value = "' . $row['america'] . '" /></td>';
+echo '<td>USD<input type="text" name="tramo1_europa_usd" value = "' . $row['europa'] . '" /></td>';
+echo '<td>USD<input type="text" name="tramo1_asia_usd" value = "' . $row['asia'] . '" /></td>';
+echo '<td>USD<input type="text" name="tramo1_africaoceania_usd" value = "' . $row['africa_oceania'] . '" /></td>';
+echo '</tr>';
+					
+
+$query = "SELECT * FROM tramos WHERE id_tramo = 2 AND currency = 'ch'";
+$result = mysql_query($query,	$con);
+$row = mysql_fetch_assoc($result);
+
+echo '<tr>';
+echo '<td class="gris">250 - 500g</td>';
+echo '<td>$ch&nbsp;<input type="text" name="tramo2_america_ch" value = "' . $row['america'] . '" /></td>';
+echo '<td>$ch&nbsp;<input type="text" name="tramo2_europa_ch" value = "' . $row['europa'] . '" /></td>';
+echo '<td>$ch&nbsp;<input type="text" name="tramo2_asia_ch" value = "' . $row['asia'] . '" /></td>';
+echo '<td>$ch&nbsp;<input type="text" name="tramo2_africaoceania_ch" value = "' . $row['africa_oceania'] . '" /></td>';
+echo '</tr>';
+
+
+$query = "SELECT * FROM tramos WHERE id_tramo = 2 AND currency = 'usd'";
+$result = mysql_query($query,	$con);
+$row = mysql_fetch_assoc($result);
+
+echo '<tr>';
+echo '<td></td>';
+echo '<td>USD<input type="text" name="tramo2_america_usd" value = "' . $row['america'] . '" /></td>';
+echo '<td>USD<input type="text" name="tramo2_europa_usd" value = "' . $row['europa'] . '" /></td>';
+echo '<td>USD<input type="text" name="tramo2_asia_usd" value = "' . $row['asia'] . '" /></td>';
+echo '<td>USD<input type="text" name="tramo2_africaoceania_usd" value = "' . $row['africa_oceania'] . '" /></td>';
+echo '</tr>';
+
+
+$query = "SELECT * FROM tramos WHERE id_tramo = 3 AND currency = 'ch'";
+$result = mysql_query($query,	$con);
+$row = mysql_fetch_assoc($result);
+
+echo '<tr>';
+echo '<td class="gris">500 - 1000g</td>';
+echo '<td>$ch&nbsp;<input type="text" name="tramo3_america_ch" value = "' . $row['america'] . '" /></td>';
+echo '<td>$ch&nbsp;<input type="text" name="tramo3_europa_ch" value = "' . $row['europa'] . '" /></td>';
+echo '<td>$ch&nbsp;<input type="text" name="tramo3_asia_ch" value = "' . $row['asia'] . '" /></td>';
+echo '<td>$ch&nbsp;<input type="text" name="tramo3_africaoceania_ch" value = "' . $row['africa_oceania'] . '" /></td>';
+echo '</tr>';
+
+
+$query = "SELECT * FROM tramos WHERE id_tramo = 3 AND currency = 'usd'";
+$result = mysql_query($query,	$con);
+$row = mysql_fetch_assoc($result);
+
+echo '<tr>';
+echo '<td></td>';
+echo '<td>USD<input type="text" name="tramo3_america_usd" value = "' . $row['america'] . '" /></td>';
+echo '<td>USD<input type="text" name="tramo3_europa_usd" value = "' . $row['europa'] . '" /></td>';
+echo '<td>USD<input type="text" name="tramo3_asia_usd" value = "' . $row['asia'] . '" /></td>';
+echo '<td>USD<input type="text" name="tramo3_africaoceania_usd" value = "' . $row['africa_oceania'] . '" /></td>';
+echo '</tr>';
+?>
+</table>
+				
+					<input type='submit' value='Aceptar'>
+</form>
+
+<br/>
+<br/>
+								<p>CONDICIONES DE ENVIO</p>
+								<form enctype="multipart/form-data" action="update_legal_conditions.php?lang=es" method="POST">
+													<table class='tabla'>
+												 <tr class='tabla1'>
+														<td>Condiciones de envío:</td>
+														<td><input type="hidden" name="MAX_FILE_SIZE" value="300000" /></td>
+														<td><input type="file" name="message" /></td>
+												 </tr>
+													</table>
+										<input type='submit' value='Aceptar'>
+								</form>
+								
+								<?php 
+$myfile = fopen('legal_conditions_en.txt', "r") or die("Se ha producido un error al abrir el archivo de condiciones legales!");
+echo '<textarea style="margin-left:65px; margin-top:20px; width:90%; height:400px; padding:1%;">';
+while(($line = fgets($myfile)) !== false){
+echo $line;// . '<br/>';
+}
+fclose($myfile);
+echo '</textarea>';
+								
+								?>
+								
+<br/>
+<br/>
+								</body>
+								</html>

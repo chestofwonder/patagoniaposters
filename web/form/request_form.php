@@ -1,4 +1,4 @@
-
+<?php $lang = $_COOKIE['lang']; ?>
 <!DOCTYPE html>
 <html lang="es">
   <head>

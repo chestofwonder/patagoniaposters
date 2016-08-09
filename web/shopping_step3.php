@@ -1,3 +1,4 @@
+<?php $lang = $_COOKIE['lang']; ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
@@ -14,7 +15,14 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="assets/images/favicon.png" class="favicon_icon">
 
-	<title>Patagonia Posters | Posters Vintage de la Patagonia | Arte Impreso</title>
+<?php
+	if( $lang == 'es' ){
+		echo '<title>Patagonia Posters | Posters Vintage de la Patagonia | Arte Impreso</title>';
+	}else{
+		echo '<title>Patagonia Posters | Vintage Posters of Patagonia | Fine Arts Prints</title>';
+	}
+?>
+	
 
 	<link rel="stylesheet" href="css/shopping.css" >
 
@@ -116,14 +124,14 @@
 	  'X-Mailer: PHP/' . phpversion();
 	  if ( $res	 = mail( $email_to, $email_subject, $email_message, $headers ) ) {
 		if ( $_POST[ "ref" ] === "request" ) {
-		  echo '<h2>¡Gracias por tu consulta!</h2>';
-		  echo '<p>Nos pondremos en contacto contigo lo antes posible.</p>';
+		  echo $lang == 'es' ? '<h2>¡Gracias por tu consulta!</h2>' : '<h2>Thank you for your inquiry!</h2>';
+		  echo $lang == 'es' ? '<p>Nos pondremos en contacto contigo lo antes posible.</p>' : '<p>We will contact you as soon as possible</p>';
 		} else {
-		  echo '<h2>¡Gracias por tu compra!</h2>';
-		  echo '<p>Gracias por su pago. Su transacción ha finalizado y le hemos enviado un recibo de su compra por correo electrónico. Puede acceder a su cuenta en www.paypal.com para ver los detalles de esta transacción.</p>';
+ 		  echo $lang == 'es' ? '<h2>¡Gracias por tu compra!</h2>' : '<h2>Thanks for your purchase!</h2>';
+		  echo $lang == 'es' ? '<p>Gracias por su pago. Su transacción ha finalizado y le hemos enviado un recibo de su compra por correo electrónico. Puede acceder a su cuenta en www.paypal.com para ver los detalles de esta transacción.</p>' : '<p>Thanks for your payment. Your transaction is completed and we have sent you a receipt for your purchase via email. You can access your account at www.paypal.com to view details of this transaction.</p>';
 		}
 	  } else {
-		echo '<p>Ha ocurrido un error al enviar en correo. Inténtalo más adelante, por favor.</p>';
+		echo $lang == 'es' ? '<p>Ha ocurrido un error al enviar el correo. Inténtalo más adelante, por favor.</p>' : '<h2>An error has occurred when sending the email. Try later, please.</h2>';
 	  }
 	  ?>
 
@@ -131,7 +139,9 @@
 		<br/>
 		<br/>
 		<br/>
-		  <p><a href="/"> << Volver a la web</a></p>
+<?php
+	echo $lang == 'es' ? '<p><a href="/"> << Volver a la web</a></p>' : '<p><a href="/"> << Back to web</a></p>';	 
+?>
 	  </div>
 
 	</div>	

@@ -1,3 +1,4 @@
+<?php $lang = $_COOKIE['lang']; ?>
 <?php
 
 // Database initialization. Create $conn var and selects "tagoni81_datos" database
@@ -8,10 +9,11 @@ include_once	'../db_connection.php';
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
+$file_name = $lang == "es" ? "legal_conditions_es.txt" : "legal_conditions_es.txt";
 $myfile = fopen($_FILES["message"]['tmp_name'], "r") or die("Se ha producido un erro al abrir el archivo!");
 $message = fread($myfile,filesize($_FILES["message"]['tmp_name']));
-$myfile = fopen("legal_conditions.txt", "w");
-$txt = "John Doe";
+$myfile = fopen($file_name, "w");
+$txt = "";
 fwrite($myfile, $message);
 fclose($myfile);
 error_reporting(E_ALL);
@@ -24,7 +26,7 @@ echo	"</div>";
 exit();
 
 //mysql_query("set names 'utf8'");
-$sql	=	'UPDATE legal_conditions SET message = "' . $message . '"  WHERE lang = ' . $_GET['lang'] . "'";
+$sql	=	'UPDATE legal_conditions SET message = "' . $message . '"  WHERE lang = ' . $lang . "'";
 
 $result	=	mysql_query($sql,	$con);
 

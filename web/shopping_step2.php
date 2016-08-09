@@ -1,3 +1,4 @@
+<?php $lang = $_COOKIE['lang']; ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
@@ -75,67 +76,149 @@ include_once	'db_connection.php';
 ?>
 		
 <div id="wrapper">
-			<br/>
-		<h1>CARRITO DE LA COMPRA</h1>
+     <br/>
+	<?php if( $lang == "es" ){
+		echo "<h1>CARRITO DE LA COMPRA</h1>";
+	      }else{
+	        echo "<h1>SHOPPING CART</h1>";
+   	      }
+	?>
 		<br/>
-		  <p><a href="/"> << Volver a la web</a></p>
+<?php if( $lang == "es" ){
+		echo '<p><a href="/"> << Volver a la web</a></p>';
+	      }else{
+	        echo '<p><a href="/"> << Back to web</a></p>';
+   	      }
+	?>
+		  
 		<br/>
 
 <div id="wrapper_send_data">
+	<?php if( $lang == "es" ){
+		echo "<h2>Déjanos tus datos para el envío</h2>";
+	      }else{
+	        echo "<h2>Send us your details for shipping</h2>";
+   	      }
+	?>
 		
-		<h2>Déjanos tus datos para el envío</h2>
 		
 		<div>
-		<label>Nombre</label>
+<?php if( $lang == "es" ){
+		echo "<label>Nombre</label>";
+	      }else{
+	        echo "<label>Name</label>";
+   	      }
+	?>
+		
 		<input class="required_data_field" type="text" tabindex="1">
 		</div>
 		
 		<div>
-		<label>Apellidos</label>
+<?php if( $lang == "es" ){
+		echo "<label>Apellidos</label>";
+	      }else{
+	        echo "<label>Surname</label>";
+   	      }
+	?>
+		
 		<input class="required_data_field" type="text">
 		</div>
 		
 	 <div>
-		<label>Correo electrónico</label>
+<?php if( $lang == "es" ){
+		echo "<label>Correo electrónico</label>";
+	      }else{
+	        echo "<label>Email</label>";
+   	      }
+	?>
+		
 		<input class="required_data_field" type="email">
 		</div>
 		
 		<div>
-		<label>Dirección de envío</label>
+<?php if( $lang == "es" ){
+		echo "<label>Dirección de envío</label>";
+	      }else{
+	        echo "<label>Shipping Address</label>";
+   	      }
+	?>
+		
 		<textarea class="required_data_field" type="text" rows="4"></textarea>
 		</div>
 		
 		<div>
-		<label>Provincia</label>
+<?php if( $lang == "es" ){
+		echo "<label>Provincia</label>";
+	      }else{
+	        echo "<label>State</label>";
+   	      }
+	?>
+		
 		<input class="required_data_field" type="text">
 		</div>
 		
 		<div>
-		<label for="address">Localidad</label>
+<?php if( $lang == "es" ){
+		echo '<label for="address">Localidad</label>';
+	      }else{
+	        echo '<label for="address">City</label>';
+   	      }
+	?>
+		
 		<input class="required_data_field" type="text">
 		</div>
 		
 		<div>
-		<label for="address">Código Postal</label>
+<?php if( $lang == "es" ){
+		echo '<label for="address">Código Postal</label>';
+	      }else{
+	        echo '<label for="address">Postal Code</label>';
+   	      }
+	?>
+		
 		<input class="required_data_field" type="text">
 		</div>
 		
 		<div>
-		<label for="address">País</label>
+<?php if( $lang == "es" ){
+		echo '<label for="address">País</label>';
+	      }else{
+	        echo '<label for="address">Country</label>';
+   	      }
+	?>
+		
 		<input class="required_data_field" type="text">
 		</div>
 		
 		<div id="warning_message_fields">
-				<label>Por favor, rellena todos los campos</label>
+<?php if( $lang == "es" ){
+		echo "<label>Por favor, rellena todos los campos</label>";
+	      }else{
+	        echo "<label>Please fill in all fields</label>";
+   	      }
+	?>
+				
 		</div>
 	
 		<div>
 				<input class="required_data_checkbox" type="checkbox" />
-				<label>He leído y acepto las <a href="send_conditions.php?lang='es'" target="_self">condiciones de envío</a></label>
+<?php if( $lang == "es" ){
+		echo '<label>He leído y acepto las <a data-toggle="modal" data-target="#myModal" href="#" target="_self">condiciones de envío</a></label>';
+	      }else{
+	        echo '<label>I have read and accept the <a data-toggle="modal" data-target="#myModal" href="#" target="_self">terms of delivery</a></label>';
+   	      }
+	?>
+				
 		</div>
 		
 		<div id="warning_message_check">
-				<label>Tienes que aceptar las condiciones de envío para poder hacer el pedido</label>
+<?php if( $lang == "es" ){
+		echo "<label>Tienes que aceptar las condiciones de envío para poder hacer el pedido</label>";
+	      }else{
+	        echo "<label>You have to accept the conditions of shipping to ordering</label>";
+   	      }
+	?>
+				
 		</div>
 <?php
 
@@ -271,6 +354,48 @@ echo '<input type="hidden" name="shipping_' . $product_count . '" value="' . $un
 <!-- Custom js-->
 <script type="text/javascript" src="js/reversal-custom_default.js"></script>
 <script src='jquery.zoom.js'></script>
+
+<!-- Modal -->
+<div class="_modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+        <h1 class="modal-title" id="myModalLabel">
+		    <?php 
+ if($lang == 'es'){
+   echo 'RENUNCIA DE RESPONSABILIDAD';
+ }else{
+   echo 'SHIPMENT DISCLAIMER';
+ }
+?>
+		</h1>
+      </div>
+      <div class="modal-body">
+     <?php 
+	  if($lang == 'es'){
+   $myfile = fopen('panel/legal_conditions_es.txt', "r") or die("Se ha producido un error al abrir el archivo de condiciones legales!");
+ }else{
+    $myfile = fopen('panel/legal_conditions_en.txt', "r") or die("There was an error opening the legal conditions file!");
+ }
+		 
+		  while(($line = fgets($myfile)) !== false){
+			echo $line . '<br/>';
+		  }
+		  fclose($myfile);
+	  ?>
+		<br/>
+		<br/>
+		<br/>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" style="background-color:orange;" class="btn btn-default" data-dismiss="modal"><?php echo $lang == "es" ? "Lo he leído y acepto" : "I have read and accept"; ?></button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
 

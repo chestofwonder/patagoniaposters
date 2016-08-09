@@ -1,3 +1,4 @@
+<?php setcookie("lang","es"); ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
@@ -120,7 +121,7 @@ include_once	'db_connection.php';
 </table>
 </div>
 </div>
-
+  
 <div class="navbar-collapse collapse">
 <ul class="sf-menu" id="nav">
 <li class="currents"><a href="#inicio">Inicio</a></li>
@@ -189,7 +190,6 @@ include_once	'db_connection.php';
 
 </div>
 <!--/ More Feathurs -->
-
 
 <!-- Second Header -->
 <div id="inspiracion" class="section-second-header parallax data-uk-smooth-scroll" >
@@ -2019,13 +2019,6 @@ $('#ex08').zoom();
 $('#ex2').zoom({on: 'grab'});
 $('#ex3').zoom({on: 'click'});
 $('#ex4').zoom({on: 'toggle'});
-});
-</script>
-
-<script>
-// Set lang cookie
-$.cookie('lang', 'es', { 
-	expires: 1, path: '/' 
 });
 </script>
 

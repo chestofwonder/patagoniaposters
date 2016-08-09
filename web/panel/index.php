@@ -11,6 +11,8 @@ session_unset;
 }
 ?>
 
+<?php setcookie("lang","en"); ?>
+
 <!DOCTYPE html> 
 <html
 		<head>
@@ -284,7 +286,7 @@ echo '</tr>';
 								</form>
 								
 								<?php 
-$myfile = fopen('legal_conditions.txt', "r") or die("Se ha producido un error al abrir el archivo de condiciones legales!");
+$myfile = fopen('legal_conditions_es.txt', "r") or die("Se ha producido un error al abrir el archivo de condiciones legales!");
 echo '<textarea style="margin-left:65px; margin-top:20px; width:90%; height:400px; padding:1%;">';
 while(($line = fgets($myfile)) !== false){
 echo $line;// . '<br/>';

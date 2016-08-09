@@ -1,3 +1,4 @@
+<?php $lang = $_COOKIE['lang']; ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
@@ -14,7 +15,7 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="assets/images/favicon.png" class="favicon_icon">
 
-	<title>Patagonia Posters | Posters Vintage de la Patagonia | Arte Impreso</title>
+	<title><?php echo $lang == "es" ? "Patagonia Posters | Posters Vintage de la Patagonia | Arte Impreso" : "Patagonia Posters | Vintage Posters of Patagonia | Fine Arts Prints"; ?></title>
 
 	<link rel="stylesheet" href="css/shopping.css" >
 
@@ -80,33 +81,51 @@
 	}
 	?>
 
-<?php //var_dump($_COOKIE['lang']);  ?>
+<?php //var_dump($lang);  ?>
 
 	<div id="wrapper">
 	  <br/>
-	  <h1>CARRITO DE LA COMPRA</h1>
+	  <?php if( $lang == "es"){
+		  echo "<h1>CARRITO DE LA COMPRA</h1>";
+	  }else{
+		  echo "<h1>SHOPPING CART</h1>";
+	  } ?>
 	  <br/>
-	  <p><a href="/"> << Volver a la web</a></p>
+	  <?php if( $lang == "es"){
+		    echo '<p><a href="/"> << Volver a la web</a></p>';
+	  }else{
+		  echo '<p><a href="/"> << Back to web</a></p>';
+	  } ?>
 	  <br/>
 	  <div id="wrapper_products">
-		<h2>Productos</h2>
+		<?php if( $lang == "es"){
+		    echo "<h2>Productos</h2>";
+	  }else{
+		  echo "<h2>Products</h2>";
+	  } ?>
+		
 
 		<table id="table_products">
 		  <tr>
-			<th>Producto</th>
-			<th>Cantidad</th>
-			<th>Medidas</th>
-			<th>Precio<br/>(Nacional)</th>
-			<th>Precio<br/>(Internacional)</th>
+			<?php echo $lang == "es" ? "<th>Producto</th>" : "<th>Product</th>"; ?>
+			<?php echo $lang == "es" ? "<th>Cantidad</th>" : "<th>Quantity</th>"; ?>
+			<?php echo $lang == "es" ? "<th>Medidas</th>" : "<th>Measurements</th>"; ?>
+			<?php echo $lang == "es" ? "<th>Precio<br/>(Nacional)</th>" : "<th>Price<br/>(Within Chile)</th>"; ?>
+			<?php echo $lang == "es" ? "<th>Precio<br/>(Internacional)</th>" : "<th>Price<br/>(Rest of the world)</th>"; ?>	
 		  </tr>
 		  <?php
+		  if( $lang == "es" ){
+			$table = "panel";
+		  }else{
+			$table = "paneng";
+		  }
 		  foreach ( $_COOKIE as $cookie_name => $cookie_value ) {
 
 			if ( strpos( $cookie_name, 'www_patagoniaposters_cl:add_poster_' ) !== false ) {
 			  if ( $cookie_value > 0 ) {
 				$poster_id	 = substr( $cookie_name, $cookie_name . lenght - 1, 1 );
 				mysql_query( "set names 'utf8'" );
-				$sql		 = "SELECT * FROM panel WHERE id = '" . $poster_id . "'";
+				$sql		 = "SELECT * FROM " . $table . " WHERE id = '" . $poster_id . "'";
 				$resultado	 = mysql_query( $sql );
 				$row		 = mysql_fetch_array( $resultado, MYSQL_ASSOC );
 
@@ -137,17 +156,33 @@
 
 	  <div id="wrapper_send_info">
 
-		<h2>Información del Envío</h2>
-
+		<?php if ($lang == 'es'){
+		  	echo "<h2>Información del Envío</h2>";
+		}else{
+		    echo "<h2>Shipping Information</h2>";
+		}?>
+	
 		<form action="shopping_step2.php" method="POST" target="_self">
 
 		  <div id="packaging_quantity_div">
-			<label>Tubos de pósters</label>
+			
+			<?php if ($lang == 'es'){
+				echo "<label>Tubos de pósters</label>";
+			  }else{
+				echo "<label>Posters tubes</label>";
+			}?>
+			
 			<input type="text" id="packaging_quantity" value="" />
 		  </div>
 
 		  <div id="packaging_quantity_collections_div">
-			<label>Carpetas de colecciones</label>
+			
+			<?php if ($lang == 'es'){
+				echo "<label>Carpetas de colecciones</label>";
+			  }else{
+				echo "<label>Collection folders</label>";
+			}?>
+			
 			<input type="text" id="packaging_quantity_collections" value="" />
 		  </div>
 
@@ -158,17 +193,32 @@
 		  </div>
 
 		  <div>
-			<label for="sending_zone">Zona de envío</label>
+			<?php if ($lang == 'es'){
+				echo '<label for="sending_zone">Zona de envío</label>';
+			  }else{
+				echo '<label for="sending_zone">Shipping area</label>';
+			}?>
 			<select id="sending_zone" name="sending_zone">
-			  <option value="america">América</option>
-			  <option value="europa">Europa</option>
-			  <option value="asia">Asia</option>
-			  <option  value="africa_oceania">África/Oceanía</option>
+			  <?php if ($lang == 'es'){
+				echo '<option value="america">América</option>
+					  <option value="europa">Europa</option>
+					  <option value="asia">Asia</option>
+					  <option  value="africa_oceania">África/Oceanía</option>';
+			  }else{
+				echo '<option value="america">America</option>
+					  <option value="europa">Europe</option>
+					  <option value="asia">Asia</option>
+					  <option  value="africa_oceania">Africa/Oceania</option>';
+			}?>
 			</select>
 		  </div>
 
 		  <div>
-			<label>Gastos de envío</label>
+			 <?php if ($lang == 'es'){
+			   echo "<label>Gastos de envío</label>";
+			    }else{
+			   echo "<label>Shipping costs</label>";
+			 }?>
 			<label class="currency"></label>
 			<input name="sending_costs" data-toggle="popover" data-html="true" data-placement="bottom" data-trigger="focus" title="Peso excedido para el envío por correo" data-content="" type="text" id="sending_costs" readonly="readonly" value="" />
 		  </div>
@@ -179,7 +229,7 @@
 		  </div>
 
 		  <input type="image" id="checkout" src="assets/images/btns/btn_carrito.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-		  <a href="form/request_form.php" id="checkout_other_payment" target="_self"><img src="assets/images/btns/btn_otromedio.png"></a>
+		  <a href="form/request_form.php" id="checkout_other_payment" target="_self"><img <?php echo $lang == "es" ? 'src="assets/images/btns/btn_otromedio.png"' : 'src="assets/images/btns/btn_othermeans.png"'; ?>></a>
 		</form>
 	  </div>
 
