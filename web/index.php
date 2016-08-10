@@ -1900,20 +1900,22 @@ Julieta Fernández Cánepa
 <p class="disc-text4">
 +569 8343 1495 / +569 8747 9010
 </p>
-<br><br><br><br><p class="disc-text3">
+<br><br>
+<!--<br><br><p class="disc-text3">
 SCROLL
-</p>
-<!--<p class="text5">
-<p><strong>Por favor considerar:</strong></p>
+</p>-->
+<p class="text5 second-header" style="color: #fff !important;">
+<br><strong>Por favor considerar:</strong></br>
 Julieta responde las consultas personalmente. Debido a su trabajo como guía de trekking, la demora para recibir una respuesta puede ser de hasta 10 días. <br>También se puede encargar a la artista, la pintura de una obra original, única.<br>
 Ese lugar espectacular que visitaste con amigos o personas queridas, ese momento preciso, ese paisaje a esa hora del día... <br>Puede convertirse en TU <span class="italica_p">poster vintage</span>; una pintura original y no una reproducción impresa en papel.<br>
 Consultar precios y tiempos de realización.
-</p>-->
-<p class="disc-text8">
-V<br>v
 </p>
-
+<!--</p>-->
+<!-- <p class="disc-text8">
+V<br>v
+</p> -->
 </div>
+
 
 </div>
 </div>
@@ -1921,6 +1923,7 @@ V<br>v
 <!--/ Bottom Header -->
 
 <!-- Contact Us -->
+<!--
 <div class="row">
 <div class="col-sm-12">
 <div class="header-title">
@@ -1930,10 +1933,10 @@ Julieta responde las consultas personalmente. Debido a su trabajo como guía de 
 Ese lugar espectacular que visitaste con amigos o personas queridas, ese momento preciso, ese paisaje a esa hora del día... <br>Puede convertirse en TU <span class="italica_p">poster vintage</span>; una pintura original y no una reproducción impresa en papel.<br>
 Consultar precios y tiempos de realización.
 </p><br><br>
-
 </div>
 </div>
-
+</div>
+-->
 </div>
 <!--/ Contact Us -->
 

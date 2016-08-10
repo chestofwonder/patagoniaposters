@@ -1903,19 +1903,18 @@ Julieta Fernández Cánepa
 <p class="disc-text4">
 +569 8343 1495 / +569 8747 9010
 </p>
-<br><br><br><br><p class="disc-text3">
+<br><br>
+<!-- <br><br><p class="disc-text3">
 SCROLL
+</p> -->
+<p class="text5 second-header" style="color: #fff !important;">
+<br><strong>Please note</strong><br>
+Julieta personally answers your questions. As she might be outside due to her job as a guide, a reply might take up to 10 days.<br>You can also ask for your OWN poster to be painted. This would be an original artwork, not a printed version.<br>
+Think of that special place you have visited with your loved ones, that memorable moment…<br>It can become a <span class="italica_p">Vintage</span>-style painting. Ask for further information.<br>
 </p>
-<!--<p class="text5">
-<p><strong>Por favor considerar:</strong></p>
-Julieta responde las consultas personalmente. Debido a su trabajo como guía de trekking, la demora para recibir una respuesta puede ser de hasta 10 días. <br>También se puede encargar a la artista, la pintura de una obra original, única.<br>
-Ese lugar espectacular que visitaste con amigos o personas queridas, ese momento preciso, ese paisaje a esa hora del día... <br>Puede convertirse en TU <span class="italica_p">poster vintage</span>; una pintura original y no una reproducción impresa en papel.<br>
-Consultar precios y tiempos de realización.
-</p>-->
-<p class="disc-text8">
+<!-- <p class="disc-text8">
 V<br>v
-</p>
-
+</p> -->
 </div>
 
 </div>
@@ -1924,6 +1923,7 @@ V<br>v
 <!--/ Bottom Header -->
 
 <!-- Contact Us -->
+<!--
 <div class="row">
 <div class="col-sm-12">
 <div class="header-title">
@@ -1937,6 +1937,7 @@ Think of that special place you have visited with your loved ones, that memorabl
 </div>
 
 </div>
+-->
 <!--/ Contact Us -->
 
 
