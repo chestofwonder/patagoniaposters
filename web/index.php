@@ -1774,8 +1774,10 @@ echo	" "	.	$row[8];
 
 <h5>COSTOS DE ENVÍO</h5>
 
-<p class="col-sm-6">
-POSTERS Y PROMOCIONES
+<!-- <p class="col-sm-6"> -->
+<p class="text5">
+  
+Costos de envío, dependiendo del peso, a partir de:
 <?php
 /*$sql	=	"SELECT * FROM panel WHERE id = '1'";
 $resultado	=	mysql_query($sql);
@@ -1814,53 +1816,9 @@ $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[7];
 };*/
-?><br>
-Se envían en un tubo de cartón protector, con tapas.
-</p>
-<p class="col-sm-6">
-COLECCIÓN PEQUEÑO FORMATO
-<?php
-$query = "SELECT * FROM tramos WHERE id_tramo = 3 AND currency = 'ch'";
-$result = mysql_query($query,	$con);
-$row_ch = mysql_fetch_assoc($result);
-$query = "SELECT * FROM tramos WHERE id_tramo = 3 AND currency = 'usd'";
-$result = mysql_query($query,	$con);
-$row_usd = mysql_fetch_assoc($result);
 ?>
-<br>Dentro de Chile<br>
-<?php echo " \$ch " . $row_ch['america']; ?>
-<br>Europa<br>
-<?php echo " \$ch " . $row_ch['europa'];
-echo " (USD " . $row_usd['europa'] . ")"; ?>
-<br>Asia<br>
-<?php echo " \$ch " . $row_ch['asia'];
-echo " (USD " . $row_usd['asia'] . ")"; ?>
-<br>África/Oceanía<br>
-<?php echo " \$ch " . $row_ch['africa_oceania'];
-echo " (USD " . $row_usd['africa_oceania'] . ")"; ?>
-<?php
-/*$sql	=	"SELECT * FROM panel WHERE id = '8'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[6];
-};
-<br>
-Resto del mundo<br>
 
-/*$sql	=	"SELECT * FROM panel WHERE id = '8'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[10];
-};
-$sql	=	"SELECT * FROM panel WHERE id = '8'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[7];
-};*/
-?>
-<br>
-Se envía en una carpeta protectora.<br>
-</p>
+
 
 <p class="text5">
 El envío es a través de: Correos de Chile<br>

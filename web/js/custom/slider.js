@@ -31,5 +31,7 @@ jQuery(document).ready(function($) {
 	 $("#slide11").backstretch("assets/images/slide/Personajes.jpg");
 	 $("#slide12").backstretch("assets/images/slide/pintando_laguna.jpg");
 	 $("#slide13").backstretch("assets/images/slide/pintando_nube.jpg");*/
+
+  $('#banner-fade').prepend('<img src="assets/images/logo.png" style="position:absolute; z-index:9999;" />');
 });
 

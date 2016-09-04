@@ -1777,8 +1777,10 @@ echo	" "	.	$row[8];
 
 <h5>SHIPPING COST</h5>
 
-<p class="col-sm-6">
-POSTERS AND SPECIAL SALES
+<!-- <p class="col-sm-6"> -->
+<p class="text5">
+  
+Shipping fee depending on weight, starting from:
 <?php
 /*$sql	=	"SELECT * FROM paneng WHERE id = '1'";
 $resultado	=	mysql_query($sql);
@@ -1817,53 +1819,7 @@ $resultado	=	mysql_query($sql);
 while	($row	=	mysql_fetch_row($resultado))	{
 echo	" "	.	$row[7];
 };*/
-?><br>
-They are sent in a tube with base and lid.
-</p>
-<p class="col-sm-6">
-SMALL FORMAT COLLECTION
-<?php
-$query = "SELECT * FROM tramos WHERE id_tramo = 3 AND currency = 'ch'";
-$result = mysql_query($query,	$con);
-$row_ch = mysql_fetch_assoc($result);
-$query = "SELECT * FROM tramos WHERE id_tramo = 3 AND currency = 'usd'";
-$result = mysql_query($query,	$con);
-$row_usd = mysql_fetch_assoc($result);
 ?>
-<br>Within Chile <br>
-<?php echo " \$ch " . $row_ch['america']; ?>
-<br>Europe<br>
-<?php echo " \$ch " . $row_ch['europa'];
-echo " (USD " . $row_usd['europa'] . ")"; ?>
-<br>Asia<br>
-<?php echo " \$ch " . $row_ch['asia'];
-echo " (USD " . $row_usd['asia'] . ")"; ?>
-<br>Africa/Oceania<br>
-<?php echo " \$ch " . $row_ch['africa_oceania'];
-echo " (USD " . $row_usd['africa_oceania'] . ")"; ?>
-<?php
-/*$sql	=	"SELECT * FROM paneng WHERE id = '8'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[6];
-};
-<br>
-Resto del mundo<br>
-
-/*$sql	=	"SELECT * FROM paneng WHERE id = '8'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[10];
-};
-$sql	=	"SELECT * FROM paneng WHERE id = '8'";
-$resultado	=	mysql_query($sql);
-while	($row	=	mysql_fetch_row($resultado))	{
-echo	" "	.	$row[7];
-};*/
-?>
-<br>
-It is sent in a thick folder.<br>
-</p>
 
 <p class="text5">
 Shipping is by National Chilean Post-Office, "Correos de Chile"<br>
