@@ -3,9 +3,15 @@ $(document).ready(function () {
   $('#button_add_promo').on('click', function () {
 
    var promo_id = parseInt($('#tabla_promociones tr:last td input').val());
+   
+   if(isNaN(promo_id)){
+     promo_id = 0;
+   }
+
    promo_id++;
    
    var next_id = parseInt($('.single_promo').length);
+  
    next_id++;
 
     $('#tabla_promociones tr:last').after(
