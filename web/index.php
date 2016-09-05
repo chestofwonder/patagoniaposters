@@ -1791,7 +1791,7 @@ $query = "SELECT * FROM tramos WHERE id_tramo = 1 AND currency = 'usd'";
 $result = mysql_query($query,	$con);
 $row_usd = mysql_fetch_assoc($result);
 ?>
-<br>Dentro de Chile<br>
+<br>América<br>
 <?php echo " \$ch " . $row_ch['america']; ?>
 <br>Europa<br>
 <?php echo " \$ch " . $row_ch['europa'];
