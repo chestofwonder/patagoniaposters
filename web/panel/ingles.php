@@ -261,6 +261,36 @@ echo '</tr>';
 
 <br/>
 <br/>
+
+<p>PESOS</p>
+<?php
+$query = "SELECT * FROM pesos WHERE producto='poster'";
+$result = mysql_query($query, $con);
+?>
+<form action="update_weights.php" method="POST">
+ <table class='tabla'>
+  <tr class='tabla1'>
+	<td>Póster:</td>
+	<?php $row = mysql_fetch_assoc($result); ?>
+	<td><input type="text" name="peso_poster" value="<?php echo $row['peso']; ?>"/></td>
+	<td>gr.</td>
+  </tr>
+<?php
+$query = "SELECT * FROM pesos WHERE producto='coleccion'";
+$result = mysql_query($query, $con);
+?>
+  <tr class='tabla1'>
+	  <td>Colección pequeño formato:&nbsp;&nbsp;</td>
+	  <?php $row = mysql_fetch_assoc($result); ?>
+	  <td><input type="text" name="peso_coleccion" value="<?php echo $row['peso']; ?>" /></td>
+	  <td>gr.</td>
+  </tr>
+ </table>
+ <input type='submit' value='Aceptar' />
+</form>
+
+<br/>
+<br/>
 								<p>CONDICIONES DE ENVIO</p>
 								<form enctype="multipart/form-data" action="update_legal_conditions.php?lang=es" method="POST">
 													<table class='tabla'>

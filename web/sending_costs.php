@@ -1,10 +1,17 @@
 <?php
 
-include_once	'db_connection.php';
+include_once 'db_connection.php';
 
 // Vars for product weight (in grs.)
-$poster_weight = 150;
-$collection_weight = 510;
+$query = "SELECT * FROM pesos WHERE producto = 'poster'";
+$result = mysql_query($query, $con);
+$row = mysql_fetch_assoc($result);
+$poster_weight = intval($row['peso']); //150
+
+$query = "SELECT * FROM pesos WHERE producto = 'coleccion'";
+$result = mysql_query($query, $con);
+$row = mysql_fetch_assoc($result);
+$collection_weight = intval($row['peso']); //510;
 
 $total_weight = ($poster_weight * $_POST["total_posters"]) + ($collection_weight * $_POST["total_collections"]);
 $sending_cost = 0;
